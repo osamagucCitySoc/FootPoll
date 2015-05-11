@@ -156,7 +156,7 @@
 - (IBAction)dismissClicked:(id)sender {
     CATransition* transition = [CATransition animation];
     
-    transition.duration = 1.3;
+    transition.duration = 0.75;
     transition.type = kCATransitionFade;
     
     [[self navigationController].view.layer addAnimation:transition forKey:kCATransition];
