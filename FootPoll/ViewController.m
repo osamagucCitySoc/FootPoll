@@ -57,7 +57,7 @@
     
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
     
-    self.loadingView.layer.cornerRadius  = 10;
+//    self.loadingView.layer.cornerRadius  = 10;
     
     //[GMDCircleLoader setOnView:self.loadingView withTitle:@"رجاء الإنتظار" animated:YES];
 
