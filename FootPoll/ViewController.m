@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 @property (weak, nonatomic) IBOutlet UIButton *tutorialButton;
 @property (weak, nonatomic) IBOutlet UIImageView *logoButton;
+
 @end
 
 @implementation ViewController
@@ -55,6 +56,12 @@
 
     
     AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    
+    self.loadingView.layer.cornerRadius  = 10;
+    
+    //[GMDCircleLoader setOnView:self.loadingView withTitle:@"رجاء الإنتظار" animated:YES];
+
+
 }
 
 
@@ -68,6 +75,8 @@
     pulseAnimation.autoreverses = YES;
     pulseAnimation.repeatCount = FLT_MAX;
     [self.logoButton.layer addAnimation:pulseAnimation forKey:nil];
+    
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated

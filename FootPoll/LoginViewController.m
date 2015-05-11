@@ -10,6 +10,7 @@
 #import "CRToastManager.h"
 #import "CRToast.h"
 
+
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *hintLabel;
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
