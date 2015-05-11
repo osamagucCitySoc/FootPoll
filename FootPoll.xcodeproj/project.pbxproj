@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E84A3EBB1B011FA2002E043D /* floatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E84A3EB71B011FA2002E043D /* floatTableViewCell.m */; };
+		E84A3EBC1B011FA2002E043D /* floatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84A3EB81B011FA2002E043D /* floatTableViewCell.xib */; };
+		E84A3EBD1B011FA2002E043D /* VCFloatingActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E84A3EBA1B011FA2002E043D /* VCFloatingActionButton.m */; };
+		E84A3EC41B011FF3002E043D /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3EBE1B011FF3002E043D /* cross.png */; };
+		E84A3EC51B011FF3002E043D /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3EBF1B011FF3002E043D /* plus.png */; };
+		E84A3ED01B0120CA002E043D /* Mind Map-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ECA1B0120CA002E043D /* Mind Map-100.png */; };
+		E84A3ED11B0120CA002E043D /* Mind Map-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ECB1B0120CA002E043D /* Mind Map-100@2x.png */; };
+		E84A3ED21B0120CA002E043D /* Mind Map-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ECC1B0120CA002E043D /* Mind Map-100@3x.png */; };
+		E84A3ED31B0120CA002E043D /* Ratings Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ECD1B0120CA002E043D /* Ratings Filled-100.png */; };
+		E84A3ED41B0120CA002E043D /* Ratings Filled-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ECE1B0120CA002E043D /* Ratings Filled-100@2x.png */; };
+		E84A3ED51B0120CA002E043D /* Ratings Filled-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ECF1B0120CA002E043D /* Ratings Filled-100@3x.png */; };
+		E84A3ED91B0121ED002E043D /* Olympic Medal-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ED61B0121ED002E043D /* Olympic Medal-100.png */; };
+		E84A3EDA1B0121ED002E043D /* Olympic Medal-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ED71B0121ED002E043D /* Olympic Medal-100@2x.png */; };
+		E84A3EDB1B0121ED002E043D /* Olympic Medal-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E84A3ED81B0121ED002E043D /* Olympic Medal-100@3x.png */; };
 		E8A20EE61B00CEB700EFB8E6 /* GMDCircleLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A20EE51B00CEB700EFB8E6 /* GMDCircleLoader.m */; };
 		E8A20EE81B00CEBC00EFB8E6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A20EE71B00CEBC00EFB8E6 /* QuartzCore.framework */; };
 		E8A20EEA1B00E25500EFB8E6 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A20EE91B00E25500EFB8E6 /* Accelerate.framework */; };
-		E8A20EF41B00EE3000EFB8E6 /* tableViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20EF11B00EE3000EFB8E6 /* tableViewBG.png */; };
-		E8A20EF51B00EE3000EFB8E6 /* tableViewBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20EF21B00EE3000EFB8E6 /* tableViewBG@2x.png */; };
-		E8A20EF61B00EE3000EFB8E6 /* tableViewBG@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20EF31B00EE3000EFB8E6 /* tableViewBG@3x.png */; };
 		E8A20EFA1B00F97900EFB8E6 /* Clock-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20EF71B00F97900EFB8E6 /* Clock-100.png */; };
 		E8A20EFB1B00F97900EFB8E6 /* Clock-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20EF81B00F97900EFB8E6 /* Clock-100@2x.png */; };
 		E8A20EFC1B00F97900EFB8E6 /* Clock-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20EF91B00F97900EFB8E6 /* Clock-100@3x.png */; };
@@ -25,6 +36,9 @@
 		E8A20F0B1B00FFF900EFB8E6 /* Bayern Munchen.jpg.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F091B00FFF900EFB8E6 /* Bayern Munchen.jpg.png */; };
 		E8A20F0C1B00FFF900EFB8E6 /* fc-barcelona-456-1-2014-17-2-16.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F0A1B00FFF900EFB8E6 /* fc-barcelona-456-1-2014-17-2-16.png */; };
 		E8A20F0F1B01002100EFB8E6 /* AllMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8A20F0E1B01002100EFB8E6 /* AllMatchesViewController.m */; };
+		E8A20F171B010DF000EFB8E6 /* tableViewBG@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F141B010DF000EFB8E6 /* tableViewBG@3x.png */; };
+		E8A20F181B010DF000EFB8E6 /* tableViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F151B010DF000EFB8E6 /* tableViewBG.png */; };
+		E8A20F191B010DF000EFB8E6 /* tableViewBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F161B010DF000EFB8E6 /* tableViewBG@2x.png */; };
 		E8CD0F491B0083D400AB6642 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD0F481B0083D400AB6642 /* AddUserViewController.m */; };
 		E8CD0F571B009C0D00AB6642 /* clubs.json in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F561B009C0D00AB6642 /* clubs.json */; };
 		E8CD0F5B1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F581B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png */; };
@@ -80,13 +94,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E84A3EB61B011FA2002E043D /* floatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = floatTableViewCell.h; sourceTree = "<group>"; };
+		E84A3EB71B011FA2002E043D /* floatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = floatTableViewCell.m; sourceTree = "<group>"; };
+		E84A3EB81B011FA2002E043D /* floatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = floatTableViewCell.xib; sourceTree = "<group>"; };
+		E84A3EB91B011FA2002E043D /* VCFloatingActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCFloatingActionButton.h; sourceTree = "<group>"; };
+		E84A3EBA1B011FA2002E043D /* VCFloatingActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCFloatingActionButton.m; sourceTree = "<group>"; };
+		E84A3EBE1B011FF3002E043D /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		E84A3EBF1B011FF3002E043D /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		E84A3ECA1B0120CA002E043D /* Mind Map-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mind Map-100.png"; sourceTree = "<group>"; };
+		E84A3ECB1B0120CA002E043D /* Mind Map-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mind Map-100@2x.png"; sourceTree = "<group>"; };
+		E84A3ECC1B0120CA002E043D /* Mind Map-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mind Map-100@3x.png"; sourceTree = "<group>"; };
+		E84A3ECD1B0120CA002E043D /* Ratings Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ratings Filled-100.png"; sourceTree = "<group>"; };
+		E84A3ECE1B0120CA002E043D /* Ratings Filled-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ratings Filled-100@2x.png"; sourceTree = "<group>"; };
+		E84A3ECF1B0120CA002E043D /* Ratings Filled-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ratings Filled-100@3x.png"; sourceTree = "<group>"; };
+		E84A3ED61B0121ED002E043D /* Olympic Medal-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Olympic Medal-100.png"; sourceTree = "<group>"; };
+		E84A3ED71B0121ED002E043D /* Olympic Medal-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Olympic Medal-100@2x.png"; sourceTree = "<group>"; };
+		E84A3ED81B0121ED002E043D /* Olympic Medal-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Olympic Medal-100@3x.png"; sourceTree = "<group>"; };
 		E8A20EE41B00CEB700EFB8E6 /* GMDCircleLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMDCircleLoader.h; sourceTree = "<group>"; };
 		E8A20EE51B00CEB700EFB8E6 /* GMDCircleLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMDCircleLoader.m; sourceTree = "<group>"; };
 		E8A20EE71B00CEBC00EFB8E6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E8A20EE91B00E25500EFB8E6 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		E8A20EF11B00EE3000EFB8E6 /* tableViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBG.png; sourceTree = "<group>"; };
-		E8A20EF21B00EE3000EFB8E6 /* tableViewBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBG@2x.png"; sourceTree = "<group>"; };
-		E8A20EF31B00EE3000EFB8E6 /* tableViewBG@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBG@3x.png"; sourceTree = "<group>"; };
 		E8A20EF71B00F97900EFB8E6 /* Clock-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock-100.png"; sourceTree = "<group>"; };
 		E8A20EF81B00F97900EFB8E6 /* Clock-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock-100@2x.png"; sourceTree = "<group>"; };
 		E8A20EF91B00F97900EFB8E6 /* Clock-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock-100@3x.png"; sourceTree = "<group>"; };
@@ -100,6 +127,9 @@
 		E8A20F0A1B00FFF900EFB8E6 /* fc-barcelona-456-1-2014-17-2-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fc-barcelona-456-1-2014-17-2-16.png"; sourceTree = "<group>"; };
 		E8A20F0D1B01002100EFB8E6 /* AllMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllMatchesViewController.h; sourceTree = "<group>"; };
 		E8A20F0E1B01002100EFB8E6 /* AllMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllMatchesViewController.m; sourceTree = "<group>"; };
+		E8A20F141B010DF000EFB8E6 /* tableViewBG@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBG@3x.png"; sourceTree = "<group>"; };
+		E8A20F151B010DF000EFB8E6 /* tableViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBG.png; sourceTree = "<group>"; };
+		E8A20F161B010DF000EFB8E6 /* tableViewBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBG@2x.png"; sourceTree = "<group>"; };
 		E8CD0F471B0083D400AB6642 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		E8CD0F481B0083D400AB6642 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		E8CD0F561B009C0D00AB6642 /* clubs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clubs.json; sourceTree = "<group>"; };
@@ -182,6 +212,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8A20F201B011B6900EFB8E6 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				E84A3EB61B011FA2002E043D /* floatTableViewCell.h */,
+				E84A3EB71B011FA2002E043D /* floatTableViewCell.m */,
+				E84A3EB81B011FA2002E043D /* floatTableViewCell.xib */,
+				E84A3EB91B011FA2002E043D /* VCFloatingActionButton.h */,
+				E84A3EBA1B011FA2002E043D /* VCFloatingActionButton.m */,
+			);
+			name = SideMenu;
+			sourceTree = "<group>";
+		};
 		E8CD0F7D1B00BC9B00AB6642 /* LoaderSpinner */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,14 +268,14 @@
 				E8F2A6D91AFF982000BBF3B6 /* MCFadeSegue.m */,
 				E8CD0F471B0083D400AB6642 /* AddUserViewController.h */,
 				E8CD0F481B0083D400AB6642 /* AddUserViewController.m */,
-				E8F2A6851AFF4BDA00BBF3B6 /* Main.storyboard */,
-				E8F2A6881AFF4BDA00BBF3B6 /* Images.xcassets */,
-				E8F2A68A1AFF4BDA00BBF3B6 /* LaunchScreen.xib */,
-				E8F2A67B1AFF4BDA00BBF3B6 /* Supporting Files */,
 				E8CD0F6A1B00B98000AB6642 /* ResetPasswordViewController.h */,
 				E8CD0F6B1B00B98000AB6642 /* ResetPasswordViewController.m */,
 				E8A20F0D1B01002100EFB8E6 /* AllMatchesViewController.h */,
 				E8A20F0E1B01002100EFB8E6 /* AllMatchesViewController.m */,
+				E8F2A6851AFF4BDA00BBF3B6 /* Main.storyboard */,
+				E8F2A6881AFF4BDA00BBF3B6 /* Images.xcassets */,
+				E8F2A68A1AFF4BDA00BBF3B6 /* LaunchScreen.xib */,
+				E8F2A67B1AFF4BDA00BBF3B6 /* Supporting Files */,
 			);
 			path = FootPoll;
 			sourceTree = "<group>";
@@ -241,6 +283,7 @@
 		E8F2A67B1AFF4BDA00BBF3B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E8A20F201B011B6900EFB8E6 /* SideMenu */,
 				E8CD0F7D1B00BC9B00AB6642 /* LoaderSpinner */,
 				E8CD0F561B009C0D00AB6642 /* clubs.json */,
 				E8F2A6F31AFFB30A00BBF3B6 /* Notifications */,
@@ -291,6 +334,20 @@
 		E8F2A6F41AFFB32600BBF3B6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E84A3ED61B0121ED002E043D /* Olympic Medal-100.png */,
+				E84A3ED71B0121ED002E043D /* Olympic Medal-100@2x.png */,
+				E84A3ED81B0121ED002E043D /* Olympic Medal-100@3x.png */,
+				E84A3EBE1B011FF3002E043D /* cross.png */,
+				E84A3EBF1B011FF3002E043D /* plus.png */,
+				E84A3ECA1B0120CA002E043D /* Mind Map-100.png */,
+				E84A3ECB1B0120CA002E043D /* Mind Map-100@2x.png */,
+				E84A3ECC1B0120CA002E043D /* Mind Map-100@3x.png */,
+				E84A3ECD1B0120CA002E043D /* Ratings Filled-100.png */,
+				E84A3ECE1B0120CA002E043D /* Ratings Filled-100@2x.png */,
+				E84A3ECF1B0120CA002E043D /* Ratings Filled-100@3x.png */,
+				E8A20F141B010DF000EFB8E6 /* tableViewBG@3x.png */,
+				E8A20F151B010DF000EFB8E6 /* tableViewBG.png */,
+				E8A20F161B010DF000EFB8E6 /* tableViewBG@2x.png */,
 				E8A20F091B00FFF900EFB8E6 /* Bayern Munchen.jpg.png */,
 				E8A20F0A1B00FFF900EFB8E6 /* fc-barcelona-456-1-2014-17-2-16.png */,
 				E8A20F031B00FBA700EFB8E6 /* Online-100.png */,
@@ -302,9 +359,6 @@
 				E8A20EF71B00F97900EFB8E6 /* Clock-100.png */,
 				E8A20EF81B00F97900EFB8E6 /* Clock-100@2x.png */,
 				E8A20EF91B00F97900EFB8E6 /* Clock-100@3x.png */,
-				E8A20EF11B00EE3000EFB8E6 /* tableViewBG.png */,
-				E8A20EF21B00EE3000EFB8E6 /* tableViewBG@2x.png */,
-				E8A20EF31B00EE3000EFB8E6 /* tableViewBG@3x.png */,
 				E8CD0F641B00B0D900AB6642 /* Close-100.png */,
 				E8CD0F651B00B0D900AB6642 /* Close-100@2x.png */,
 				E8CD0F661B00B0D900AB6642 /* Close-100@3x.png */,
@@ -410,11 +464,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84A3EDB1B0121ED002E043D /* Olympic Medal-100@3x.png in Resources */,
 				E8CD0F671B00B0D900AB6642 /* Close-100.png in Resources */,
 				E8F2A6871AFF4BDA00BBF3B6 /* Main.storyboard in Resources */,
-				E8A20EF61B00EE3000EFB8E6 /* tableViewBG@3x.png in Resources */,
+				E84A3ED31B0120CA002E043D /* Ratings Filled-100.png in Resources */,
 				E8CD0F5C1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg@2x.png in Resources */,
 				E8CD0F621B00AFC300AB6642 /* Down Circular-100@2x.png in Resources */,
+				E84A3EBC1B011FA2002E043D /* floatTableViewCell.xib in Resources */,
 				E8F2A68C1AFF4BDA00BBF3B6 /* LaunchScreen.xib in Resources */,
 				E8CD0F611B00AFC300AB6642 /* Down Circular-100.png in Resources */,
 				E8F2A6CA1AFF7FBE00BBF3B6 /* logo.png in Resources */,
@@ -422,35 +478,45 @@
 				E8F2A6B91AFF763D00BBF3B6 /* DroidKufi-Bold.ttf in Resources */,
 				E8CD0F691B00B0D900AB6642 /* Close-100@3x.png in Resources */,
 				E8A20F011B00FA7E00EFB8E6 /* Statistics-100@2x.png in Resources */,
+				E8A20F191B010DF000EFB8E6 /* tableViewBG@2x.png in Resources */,
 				E8CD0F631B00AFC300AB6642 /* Down Circular-100@3x.png in Resources */,
 				E8F2A6D21AFF8FC500BBF3B6 /* Delete Sign-100.png in Resources */,
+				E84A3EC51B011FF3002E043D /* plus.png in Resources */,
 				E8CD0F5B1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png in Resources */,
 				E8A20F0B1B00FFF900EFB8E6 /* Bayern Munchen.jpg.png in Resources */,
 				E8F2A70B1AFFB67500BBF3B6 /* High Priority-100@2x.png in Resources */,
 				E8A20F021B00FA7E00EFB8E6 /* Statistics-100@3x.png in Resources */,
+				E84A3ED01B0120CA002E043D /* Mind Map-100.png in Resources */,
 				E8A20F081B00FBA700EFB8E6 /* Online-100@3x.png in Resources */,
+				E84A3ED41B0120CA002E043D /* Ratings Filled-100@2x.png in Resources */,
 				E8A20F061B00FBA700EFB8E6 /* Online-100.png in Resources */,
 				E8F2A6D31AFF8FC500BBF3B6 /* Delete Sign-100@2x.png in Resources */,
 				E8F2A6D41AFF8FC500BBF3B6 /* Delete Sign-100@3x.png in Resources */,
+				E84A3EDA1B0121ED002E043D /* Olympic Medal-100@2x.png in Resources */,
 				E8F2A6CC1AFF7FBE00BBF3B6 /* logo@3x.png in Resources */,
+				E8A20F181B010DF000EFB8E6 /* tableViewBG.png in Resources */,
+				E84A3ED11B0120CA002E043D /* Mind Map-100@2x.png in Resources */,
 				E8A20F071B00FBA700EFB8E6 /* Online-100@2x.png in Resources */,
 				E8F2A6BA1AFF763D00BBF3B6 /* DroidKufi-Regular.ttf in Resources */,
 				E8F2A6CB1AFF7FBE00BBF3B6 /* logo@2x.png in Resources */,
 				E8CD0F5D1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg@3x.png in Resources */,
 				E8F2A6891AFF4BDA00BBF3B6 /* Images.xcassets in Resources */,
+				E84A3ED51B0120CA002E043D /* Ratings Filled-100@3x.png in Resources */,
 				E8F2A70A1AFFB67500BBF3B6 /* High Priority-100.png in Resources */,
 				E8A20F0C1B00FFF900EFB8E6 /* fc-barcelona-456-1-2014-17-2-16.png in Resources */,
-				E8A20EF51B00EE3000EFB8E6 /* tableViewBG@2x.png in Resources */,
 				E8A20EFB1B00F97900EFB8E6 /* Clock-100@2x.png in Resources */,
 				E8CD0F571B009C0D00AB6642 /* clubs.json in Resources */,
+				E84A3ED21B0120CA002E043D /* Mind Map-100@3x.png in Resources */,
 				E8A20F001B00FA7E00EFB8E6 /* Statistics-100.png in Resources */,
-				E8A20EF41B00EE3000EFB8E6 /* tableViewBG.png in Resources */,
 				E8F2A6B61AFF75CE00BBF3B6 /* background-black-elegant-in-color-photos-139913-640x960@3x.jpg in Resources */,
 				E8F2A6B51AFF75CE00BBF3B6 /* background-black-elegant-in-color-photos-139913-640x960@2x.jpg in Resources */,
 				E8CD0F681B00B0D900AB6642 /* Close-100@2x.png in Resources */,
+				E8A20F171B010DF000EFB8E6 /* tableViewBG@3x.png in Resources */,
+				E84A3EC41B011FF3002E043D /* cross.png in Resources */,
 				E8F2A70C1AFFB67500BBF3B6 /* High Priority-100@3x.png in Resources */,
 				E8F2A6B41AFF75CE00BBF3B6 /* background-black-elegant-in-color-photos-139913-640x960.jpg in Resources */,
 				E8A20EFA1B00F97900EFB8E6 /* Clock-100.png in Resources */,
+				E84A3ED91B0121ED002E043D /* Olympic Medal-100.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +536,7 @@
 			files = (
 				E8F2A6D71AFF939200BBF3B6 /* LoginViewController.m in Sources */,
 				E8CD0F6C1B00B98000AB6642 /* ResetPasswordViewController.m in Sources */,
+				E84A3EBB1B011FA2002E043D /* floatTableViewCell.m in Sources */,
 				E8F2A7051AFFB4D800BBF3B6 /* CRToastViewController.m in Sources */,
 				E8F2A7061AFFB4D800BBF3B6 /* CRToastWindow.m in Sources */,
 				E8A20F0F1B01002100EFB8E6 /* AllMatchesViewController.m in Sources */,
@@ -477,6 +544,7 @@
 				E8F2A7021AFFB4D800BBF3B6 /* CRToast.m in Sources */,
 				E8F2A7041AFFB4D800BBF3B6 /* CRToastView.m in Sources */,
 				E8CD0F491B0083D400AB6642 /* AddUserViewController.m in Sources */,
+				E84A3EBD1B011FA2002E043D /* VCFloatingActionButton.m in Sources */,
 				E8F2A6DA1AFF982000BBF3B6 /* MCFadeSegue.m in Sources */,
 				E8F2A7031AFFB4D800BBF3B6 /* CRToastManager.m in Sources */,
 				E8F2A6811AFF4BDA00BBF3B6 /* AppDelegate.m in Sources */,
