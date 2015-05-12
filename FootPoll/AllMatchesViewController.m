@@ -150,6 +150,10 @@
 -(void) didSelectMenuOptionAtIndex:(NSInteger)row
 {
     NSLog(@"Floating action tapped index %tu",row);
+    if(row == 0)
+    {
+        [self performSegueWithIdentifier:@"MyStatsSeg" sender:self];
+    }
 }
 /*
 #pragma mark - Navigation

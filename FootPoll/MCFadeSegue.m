@@ -16,7 +16,7 @@
 - (void)perform
 {
     CATransition *transition = [CATransition animation];
-    transition.duration = 1.0;
+    transition.duration = 0.5;
     transition.type = kCATransitionFade;
     
     [[[[[self sourceViewController] view] window] layer] addAnimation:transition
