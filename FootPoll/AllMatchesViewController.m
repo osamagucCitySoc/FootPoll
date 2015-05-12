@@ -153,6 +153,9 @@
     if(row == 0)
     {
         [self performSegueWithIdentifier:@"MyStatsSeg" sender:self];
+    }else if(row == 1)
+    {
+        [self performSegueWithIdentifier:@"RankingSeg" sender:self];
     }
 }
 /*

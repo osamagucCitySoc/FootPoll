@@ -27,8 +27,8 @@
                     <color key="textColor" red="0.97647058819999999" green="0.84705882349999995" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8kz-fP-ToH">
-                    <rect key="frame" x="120" y="176" width="240" height="128"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="8kz-fP-ToH">
+                    <rect key="frame" x="79" y="240" width="256" height="256"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="256" id="T2F-Oc-wLv"/>
                         <constraint firstAttribute="height" constant="256" id="tTz-4x-hvY"/>

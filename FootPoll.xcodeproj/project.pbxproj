@@ -53,6 +53,13 @@
 		E8CD0F681B00B0D900AB6642 /* Close-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F651B00B0D900AB6642 /* Close-100@2x.png */; };
 		E8CD0F691B00B0D900AB6642 /* Close-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F661B00B0D900AB6642 /* Close-100@3x.png */; };
 		E8CD0F6C1B00B98000AB6642 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD0F6B1B00B98000AB6642 /* ResetPasswordViewController.m */; };
+		E8D234031B0252A100244D6D /* New Moon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234001B0252A100244D6D /* New Moon-100.png */; };
+		E8D234041B0252A100244D6D /* New Moon-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234011B0252A100244D6D /* New Moon-100@2x.png */; };
+		E8D234051B0252A100244D6D /* New Moon-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234021B0252A100244D6D /* New Moon-100@3x.png */; };
+		E8D234091B0256FF00244D6D /* User-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234061B0256FF00244D6D /* User-100.png */; };
+		E8D2340A1B0256FF00244D6D /* User-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234071B0256FF00244D6D /* User-100@2x.png */; };
+		E8D2340B1B0256FF00244D6D /* User-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234081B0256FF00244D6D /* User-100@3x.png */; };
+		E8D2340E1B02588900244D6D /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D2340D1B02588900244D6D /* LeaderBoardViewController.m */; };
 		E8F2A67E1AFF4BDA00BBF3B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A67D1AFF4BDA00BBF3B6 /* main.m */; };
 		E8F2A6811AFF4BDA00BBF3B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A6801AFF4BDA00BBF3B6 /* AppDelegate.m */; };
 		E8F2A6841AFF4BDA00BBF3B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A6831AFF4BDA00BBF3B6 /* ViewController.m */; };
@@ -151,6 +158,14 @@
 		E8CD0F661B00B0D900AB6642 /* Close-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close-100@3x.png"; sourceTree = "<group>"; };
 		E8CD0F6A1B00B98000AB6642 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
 		E8CD0F6B1B00B98000AB6642 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		E8D234001B0252A100244D6D /* New Moon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New Moon-100.png"; sourceTree = "<group>"; };
+		E8D234011B0252A100244D6D /* New Moon-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New Moon-100@2x.png"; sourceTree = "<group>"; };
+		E8D234021B0252A100244D6D /* New Moon-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New Moon-100@3x.png"; sourceTree = "<group>"; };
+		E8D234061B0256FF00244D6D /* User-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User-100.png"; sourceTree = "<group>"; };
+		E8D234071B0256FF00244D6D /* User-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User-100@2x.png"; sourceTree = "<group>"; };
+		E8D234081B0256FF00244D6D /* User-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User-100@3x.png"; sourceTree = "<group>"; };
+		E8D2340C1B02588900244D6D /* LeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewController.h; sourceTree = "<group>"; };
+		E8D2340D1B02588900244D6D /* LeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
 		E8F2A6781AFF4BDA00BBF3B6 /* FootPoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootPoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F2A67C1AFF4BDA00BBF3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F2A67D1AFF4BDA00BBF3B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -301,6 +316,8 @@
 				E8A20F0E1B01002100EFB8E6 /* AllMatchesViewController.m */,
 				E84A3EDE1B013153002E043D /* MyStatsViewController.h */,
 				E84A3EDF1B013153002E043D /* MyStatsViewController.m */,
+				E8D2340C1B02588900244D6D /* LeaderBoardViewController.h */,
+				E8D2340D1B02588900244D6D /* LeaderBoardViewController.m */,
 				E8F2A6851AFF4BDA00BBF3B6 /* Main.storyboard */,
 				E8F2A6881AFF4BDA00BBF3B6 /* Images.xcassets */,
 				E8F2A68A1AFF4BDA00BBF3B6 /* LaunchScreen.xib */,
@@ -363,6 +380,12 @@
 		E8F2A6F41AFFB32600BBF3B6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E8D234061B0256FF00244D6D /* User-100.png */,
+				E8D234071B0256FF00244D6D /* User-100@2x.png */,
+				E8D234081B0256FF00244D6D /* User-100@3x.png */,
+				E8D234001B0252A100244D6D /* New Moon-100.png */,
+				E8D234011B0252A100244D6D /* New Moon-100@2x.png */,
+				E8D234021B0252A100244D6D /* New Moon-100@3x.png */,
 				E84A3ED61B0121ED002E043D /* Olympic Medal-100.png */,
 				E84A3ED71B0121ED002E043D /* Olympic Medal-100@2x.png */,
 				E84A3ED81B0121ED002E043D /* Olympic Medal-100@3x.png */,
@@ -495,9 +518,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D234031B0252A100244D6D /* New Moon-100.png in Resources */,
 				E84A3EDB1B0121ED002E043D /* Olympic Medal-100@3x.png in Resources */,
+				E8D234051B0252A100244D6D /* New Moon-100@3x.png in Resources */,
 				E8CD0F671B00B0D900AB6642 /* Close-100.png in Resources */,
 				E8F2A6871AFF4BDA00BBF3B6 /* Main.storyboard in Resources */,
+				E8D234041B0252A100244D6D /* New Moon-100@2x.png in Resources */,
 				E84A3ED31B0120CA002E043D /* Ratings Filled-100.png in Resources */,
 				E8CD0F5C1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg@2x.png in Resources */,
 				E8CD0F621B00AFC300AB6642 /* Down Circular-100@2x.png in Resources */,
@@ -522,6 +548,7 @@
 				E84A3ED41B0120CA002E043D /* Ratings Filled-100@2x.png in Resources */,
 				E8A20F061B00FBA700EFB8E6 /* Online-100.png in Resources */,
 				E8F2A6D31AFF8FC500BBF3B6 /* Delete Sign-100@2x.png in Resources */,
+				E8D2340B1B0256FF00244D6D /* User-100@3x.png in Resources */,
 				E8F2A6D41AFF8FC500BBF3B6 /* Delete Sign-100@3x.png in Resources */,
 				E84A3EDA1B0121ED002E043D /* Olympic Medal-100@2x.png in Resources */,
 				E8F2A6CC1AFF7FBE00BBF3B6 /* logo@3x.png in Resources */,
@@ -533,7 +560,9 @@
 				E8CD0F5D1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg@3x.png in Resources */,
 				E8F2A6891AFF4BDA00BBF3B6 /* Images.xcassets in Resources */,
 				E84A3ED51B0120CA002E043D /* Ratings Filled-100@3x.png in Resources */,
+				E8D2340A1B0256FF00244D6D /* User-100@2x.png in Resources */,
 				E8F2A70A1AFFB67500BBF3B6 /* High Priority-100.png in Resources */,
+				E8D234091B0256FF00244D6D /* User-100.png in Resources */,
 				E8A20F0C1B00FFF900EFB8E6 /* fc-barcelona-456-1-2014-17-2-16.png in Resources */,
 				E8A20EFB1B00F97900EFB8E6 /* Clock-100@2x.png in Resources */,
 				E8CD0F571B009C0D00AB6642 /* clubs.json in Resources */,
@@ -598,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D2340E1B02588900244D6D /* LeaderBoardViewController.m in Sources */,
 				E8F2A6D71AFF939200BBF3B6 /* LoginViewController.m in Sources */,
 				E8CD0F6C1B00B98000AB6642 /* ResetPasswordViewController.m in Sources */,
 				E84A3EBB1B011FA2002E043D /* floatTableViewCell.m in Sources */,
