@@ -299,12 +299,12 @@
 				E8CD0F6B1B00B98000AB6642 /* ResetPasswordViewController.m */,
 				E8A20F0D1B01002100EFB8E6 /* AllMatchesViewController.h */,
 				E8A20F0E1B01002100EFB8E6 /* AllMatchesViewController.m */,
+				E84A3EDE1B013153002E043D /* MyStatsViewController.h */,
+				E84A3EDF1B013153002E043D /* MyStatsViewController.m */,
 				E8F2A6851AFF4BDA00BBF3B6 /* Main.storyboard */,
 				E8F2A6881AFF4BDA00BBF3B6 /* Images.xcassets */,
 				E8F2A68A1AFF4BDA00BBF3B6 /* LaunchScreen.xib */,
 				E8F2A67B1AFF4BDA00BBF3B6 /* Supporting Files */,
-				E84A3EDE1B013153002E043D /* MyStatsViewController.h */,
-				E84A3EDF1B013153002E043D /* MyStatsViewController.m */,
 			);
 			path = FootPoll;
 			sourceTree = "<group>";

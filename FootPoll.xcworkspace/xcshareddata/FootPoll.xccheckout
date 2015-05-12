@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B5C2583D-7007-4346-BC47-0BE031B4FDCD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FootPoll</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F7B815BCF129A6FE1E17A29EF8EB54446548151E</key>
+		<string>https://github.com/osamagucCitySoc/FootPoll.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FootPoll.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F7B815BCF129A6FE1E17A29EF8EB54446548151E</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/osamagucCitySoc/FootPoll.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F7B815BCF129A6FE1E17A29EF8EB54446548151E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F7B815BCF129A6FE1E17A29EF8EB54446548151E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FootPoll</string>
+		</dict>
+	</array>
+</dict>
+</plist>

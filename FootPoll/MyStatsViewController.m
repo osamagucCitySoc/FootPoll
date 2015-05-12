@@ -44,33 +44,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    /*NSArray *items = @[[PNPieChartDataItem dataItemWithValue:30 color:[UIColor colorWithRed:0.945 green:0.768 blue:0.058 alpha:1] description:@"توقعات صحيحة\nغير رابحة"],
-                       [PNPieChartDataItem dataItemWithValue:20 color:[UIColor colorWithRed:0.901 green:0.494 blue:0.133 alpha:1] description:@"توقعات صحيحة\nرابحة"],
-                       [PNPieChartDataItem dataItemWithValue:40 color:[UIColor colorWithRed:0.741 green:0.764 blue:0.780 alpha:1] description:@"توقعات خاطئة"],
-                       ];
-    
-    
-    
-    PNPieChart *pieChart = [[PNPieChart alloc] initWithFrame:CGRectMake(25, 25, self.holderView.frame.size.width-50, self.holderView.frame.size.height-50) items:items];
-    pieChart.descriptionTextColor = [UIColor whiteColor];
-    pieChart.descriptionTextFont  = [UIFont fontWithName:@"DroidArabicKufi" size:12];
-    [pieChart strokeChart];
    
-    pieChart.legendStyle = PNLegendItemStyleSerial;
-    pieChart.legendFont = [UIFont fontWithName:@"DroidArabicKufi" size:12.0];
-    pieChart.legendFontColor = [UIColor whiteColor];
-    UIView *legend = [pieChart getLegendWithMaxWidth:200];
-    
-    //Move legend to the desired position and add to view
-    [legend setFrame:CGRectMake(20, self.holderView.frame.size.height-100, legend.frame.size.width, legend.frame.size.height)];
-    [self.holderView addSubview:legend];
-    
-    [self.holderView addSubview:pieChart];*/
-    
-    
-    
-    
     self.barChart = [[PNBarChart alloc] initWithFrame:CGRectMake(5, 25, self.holderView.frame.size.width-10, self.holderView.frame.size.height-50)];
     self.barChart.backgroundColor = [UIColor clearColor];
     self.barChart.yLabelFormatter = ^(CGFloat yValue){
