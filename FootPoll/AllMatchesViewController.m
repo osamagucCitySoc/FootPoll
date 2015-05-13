@@ -10,6 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <Accelerate/Accelerate.h>
 #import "VCFloatingActionButton.h"
+#import "PollView.h"
 
 @interface AllMatchesViewController ()<UITableViewDataSource,UITableViewDelegate,floatMenuDelegate>
 
@@ -85,6 +86,8 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
    
     return cell;
 }
@@ -111,7 +114,8 @@
     ((UIButton*)[cell viewWithTag:9]).layer.cornerRadius = 10;
     ((UIButton*)[cell viewWithTag:9]).layer.borderColor = [[UIColor alloc]initWithWhite:1 alpha:1].CGColor;
     ((UIButton*)[cell viewWithTag:9]).titleLabel.font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
-    
+
+    [((UIButton*)[cell viewWithTag:9]) addTarget:self action:@selector(checkButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 
     ((UILabel*)[cell viewWithTag:1]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
    // ((UILabel*)[cell viewWithTag:3]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
@@ -144,6 +148,39 @@
 -(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     return @"دوري أبطال أوروبا";
+}
+
+
+
+
+- (void)checkButtonTapped:(UIButton*)sender
+{
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    if (indexPath != nil)
+    {
+        NSLog(@"%li",(long)indexPath.row);
+        
+        
+        UITableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        
+        PollView* pollView = [[PollView alloc]init];
+        pollView = [pollView initWithNib];
+        [pollView setFrame:cell.contentView.frame];
+       
+        [pollView initUI];
+        
+        [cell.layer removeAllAnimations];
+        
+        CATransition *transition = [CATransition animation];
+        transition.duration = 0.5;
+        transition.type = kCATransitionMoveIn;
+        transition.subtype = kCATransitionFromRight;
+        [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+        [cell.layer addAnimation:transition forKey:nil];
+        
+        [cell addSubview:pollView];
+    }
 }
 
 #pragma mark menu delegate

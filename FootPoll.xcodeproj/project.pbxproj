@@ -42,6 +42,14 @@
 		E8A20F181B010DF000EFB8E6 /* tableViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F151B010DF000EFB8E6 /* tableViewBG.png */; };
 		E8A20F191B010DF000EFB8E6 /* tableViewBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F161B010DF000EFB8E6 /* tableViewBG@2x.png */; };
 		E8AA0E111B03206C00C3B204 /* WinnersHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0E101B03206C00C3B204 /* WinnersHistoryViewController.m */; };
+		E8AA0E131B033F5E00C3B204 /* PollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E121B033F5E00C3B204 /* PollView.xib */; };
+		E8AA0E161B033F8400C3B204 /* PollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0E151B033F8400C3B204 /* PollView.m */; };
+		E8AA0E1D1B034E6500C3B204 /* Minus Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E171B034E6500C3B204 /* Minus Filled-100.png */; };
+		E8AA0E1E1B034E6500C3B204 /* Minus Filled-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E181B034E6500C3B204 /* Minus Filled-100@2x.png */; };
+		E8AA0E1F1B034E6500C3B204 /* Minus Filled-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E191B034E6500C3B204 /* Minus Filled-100@3x.png */; };
+		E8AA0E261B0350DD00C3B204 /* Plus Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E231B0350DD00C3B204 /* Plus Filled-100.png */; };
+		E8AA0E271B0350DD00C3B204 /* Plus Filled-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E241B0350DD00C3B204 /* Plus Filled-100@2x.png */; };
+		E8AA0E281B0350DD00C3B204 /* Plus Filled-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E251B0350DD00C3B204 /* Plus Filled-100@3x.png */; };
 		E8CD0F491B0083D400AB6642 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD0F481B0083D400AB6642 /* AddUserViewController.m */; };
 		E8CD0F571B009C0D00AB6642 /* clubs.json in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F561B009C0D00AB6642 /* clubs.json */; };
 		E8CD0F5B1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F581B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png */; };
@@ -147,6 +155,15 @@
 		E8A20F161B010DF000EFB8E6 /* tableViewBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBG@2x.png"; sourceTree = "<group>"; };
 		E8AA0E0F1B03206C00C3B204 /* WinnersHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinnersHistoryViewController.h; sourceTree = "<group>"; };
 		E8AA0E101B03206C00C3B204 /* WinnersHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinnersHistoryViewController.m; sourceTree = "<group>"; };
+		E8AA0E121B033F5E00C3B204 /* PollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollView.xib; sourceTree = "<group>"; };
+		E8AA0E141B033F8400C3B204 /* PollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollView.h; sourceTree = "<group>"; };
+		E8AA0E151B033F8400C3B204 /* PollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollView.m; sourceTree = "<group>"; };
+		E8AA0E171B034E6500C3B204 /* Minus Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus Filled-100.png"; sourceTree = "<group>"; };
+		E8AA0E181B034E6500C3B204 /* Minus Filled-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus Filled-100@2x.png"; sourceTree = "<group>"; };
+		E8AA0E191B034E6500C3B204 /* Minus Filled-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus Filled-100@3x.png"; sourceTree = "<group>"; };
+		E8AA0E231B0350DD00C3B204 /* Plus Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus Filled-100.png"; sourceTree = "<group>"; };
+		E8AA0E241B0350DD00C3B204 /* Plus Filled-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus Filled-100@2x.png"; sourceTree = "<group>"; };
+		E8AA0E251B0350DD00C3B204 /* Plus Filled-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus Filled-100@3x.png"; sourceTree = "<group>"; };
 		E8CD0F471B0083D400AB6642 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		E8CD0F481B0083D400AB6642 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		E8CD0F561B009C0D00AB6642 /* clubs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clubs.json; sourceTree = "<group>"; };
@@ -327,6 +344,9 @@
 				E8F2A67B1AFF4BDA00BBF3B6 /* Supporting Files */,
 				E8AA0E0F1B03206C00C3B204 /* WinnersHistoryViewController.h */,
 				E8AA0E101B03206C00C3B204 /* WinnersHistoryViewController.m */,
+				E8AA0E121B033F5E00C3B204 /* PollView.xib */,
+				E8AA0E141B033F8400C3B204 /* PollView.h */,
+				E8AA0E151B033F8400C3B204 /* PollView.m */,
 			);
 			path = FootPoll;
 			sourceTree = "<group>";
@@ -385,6 +405,12 @@
 		E8F2A6F41AFFB32600BBF3B6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E8AA0E231B0350DD00C3B204 /* Plus Filled-100.png */,
+				E8AA0E241B0350DD00C3B204 /* Plus Filled-100@2x.png */,
+				E8AA0E251B0350DD00C3B204 /* Plus Filled-100@3x.png */,
+				E8AA0E171B034E6500C3B204 /* Minus Filled-100.png */,
+				E8AA0E181B034E6500C3B204 /* Minus Filled-100@2x.png */,
+				E8AA0E191B034E6500C3B204 /* Minus Filled-100@3x.png */,
 				E8D234061B0256FF00244D6D /* User-100.png */,
 				E8D234071B0256FF00244D6D /* User-100@2x.png */,
 				E8D234081B0256FF00244D6D /* User-100@3x.png */,
@@ -524,6 +550,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8D234031B0252A100244D6D /* New Moon-100.png in Resources */,
+				E8AA0E1D1B034E6500C3B204 /* Minus Filled-100.png in Resources */,
 				E84A3EDB1B0121ED002E043D /* Olympic Medal-100@3x.png in Resources */,
 				E8D234051B0252A100244D6D /* New Moon-100@3x.png in Resources */,
 				E8CD0F671B00B0D900AB6642 /* Close-100.png in Resources */,
@@ -534,6 +561,7 @@
 				E8CD0F621B00AFC300AB6642 /* Down Circular-100@2x.png in Resources */,
 				E84A3EBC1B011FA2002E043D /* floatTableViewCell.xib in Resources */,
 				E8F2A68C1AFF4BDA00BBF3B6 /* LaunchScreen.xib in Resources */,
+				E8AA0E281B0350DD00C3B204 /* Plus Filled-100@3x.png in Resources */,
 				E8CD0F611B00AFC300AB6642 /* Down Circular-100.png in Resources */,
 				E8F2A6CA1AFF7FBE00BBF3B6 /* logo.png in Resources */,
 				E8A20EFC1B00F97900EFB8E6 /* Clock-100@3x.png in Resources */,
@@ -544,16 +572,20 @@
 				E8CD0F631B00AFC300AB6642 /* Down Circular-100@3x.png in Resources */,
 				E8F2A6D21AFF8FC500BBF3B6 /* Delete Sign-100.png in Resources */,
 				E84A3EC51B011FF3002E043D /* plus.png in Resources */,
+				E8AA0E1E1B034E6500C3B204 /* Minus Filled-100@2x.png in Resources */,
 				E8CD0F5B1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png in Resources */,
+				E8AA0E261B0350DD00C3B204 /* Plus Filled-100.png in Resources */,
 				E8A20F0B1B00FFF900EFB8E6 /* Bayern Munchen.jpg.png in Resources */,
 				E8F2A70B1AFFB67500BBF3B6 /* High Priority-100@2x.png in Resources */,
 				E8A20F021B00FA7E00EFB8E6 /* Statistics-100@3x.png in Resources */,
 				E84A3ED01B0120CA002E043D /* Mind Map-100.png in Resources */,
 				E8A20F081B00FBA700EFB8E6 /* Online-100@3x.png in Resources */,
 				E84A3ED41B0120CA002E043D /* Ratings Filled-100@2x.png in Resources */,
+				E8AA0E271B0350DD00C3B204 /* Plus Filled-100@2x.png in Resources */,
 				E8A20F061B00FBA700EFB8E6 /* Online-100.png in Resources */,
 				E8F2A6D31AFF8FC500BBF3B6 /* Delete Sign-100@2x.png in Resources */,
 				E8D2340B1B0256FF00244D6D /* User-100@3x.png in Resources */,
+				E8AA0E131B033F5E00C3B204 /* PollView.xib in Resources */,
 				E8F2A6D41AFF8FC500BBF3B6 /* Delete Sign-100@3x.png in Resources */,
 				E84A3EDA1B0121ED002E043D /* Olympic Medal-100@2x.png in Resources */,
 				E8F2A6CC1AFF7FBE00BBF3B6 /* logo@3x.png in Resources */,
@@ -570,6 +602,7 @@
 				E8D234091B0256FF00244D6D /* User-100.png in Resources */,
 				E8A20F0C1B00FFF900EFB8E6 /* fc-barcelona-456-1-2014-17-2-16.png in Resources */,
 				E8A20EFB1B00F97900EFB8E6 /* Clock-100@2x.png in Resources */,
+				E8AA0E1F1B034E6500C3B204 /* Minus Filled-100@3x.png in Resources */,
 				E8CD0F571B009C0D00AB6642 /* clubs.json in Resources */,
 				E84A3ED21B0120CA002E043D /* Mind Map-100@3x.png in Resources */,
 				E8A20F001B00FA7E00EFB8E6 /* Statistics-100.png in Resources */,
@@ -647,6 +680,7 @@
 				E84A3EBD1B011FA2002E043D /* VCFloatingActionButton.m in Sources */,
 				E8F2A6DA1AFF982000BBF3B6 /* MCFadeSegue.m in Sources */,
 				E8F2A7031AFFB4D800BBF3B6 /* CRToastManager.m in Sources */,
+				E8AA0E161B033F8400C3B204 /* PollView.m in Sources */,
 				E8F2A6811AFF4BDA00BBF3B6 /* AppDelegate.m in Sources */,
 				E8F2A67E1AFF4BDA00BBF3B6 /* main.m in Sources */,
 				E8A20EE61B00CEB700EFB8E6 /* GMDCircleLoader.m in Sources */,
