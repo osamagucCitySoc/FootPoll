@@ -3,6 +3,7 @@
 
 target 'FootPoll' do
 pod 'PNChart'
+pod 'iOSPlot', '~> 1.0.1'
 end
 
 target 'FootPollTests' do

@@ -11,6 +11,8 @@
 #import <Accelerate/Accelerate.h>
 #import "VCFloatingActionButton.h"
 #import "PollView.h"
+#import "PollResultView.h"
+
 
 @interface AllMatchesViewController ()<UITableViewDataSource,UITableViewDelegate,floatMenuDelegate>
 
@@ -124,6 +126,17 @@
     ((UILabel*)[cell viewWithTag:7]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     ((UILabel*)[cell viewWithTag:8]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     
+    
+    if([indexPath row]%3 == 0)
+    {
+        [((UIButton*)[cell viewWithTag:9]) setTitle:@"توقع الأن و إربح !" forState:UIControlStateNormal];
+    }else if([indexPath row]%3 == 1)
+    {
+        [((UIButton*)[cell viewWithTag:9]) setTitle:@"شاهد التوقعات" forState:UIControlStateNormal];
+    }else if([indexPath row]%3 == 2)
+    {
+        [((UIButton*)[cell viewWithTag:9]) setTitle: @"شاهد الرابح" forState:UIControlStateNormal];
+    }
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -161,25 +174,48 @@
     {
         NSLog(@"%li",(long)indexPath.row);
         
-        
         UITableViewCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
         
-        PollView* pollView = [[PollView alloc]init];
-        pollView = [pollView initWithNib];
-        [pollView setFrame:cell.contentView.frame];
-       
-        [pollView initUI];
-        
-        [cell.layer removeAllAnimations];
-        
-        CATransition *transition = [CATransition animation];
-        transition.duration = 0.5;
-        transition.type = kCATransitionMoveIn;
-        transition.subtype = kCATransitionFromRight;
-        [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-        [cell.layer addAnimation:transition forKey:nil];
-        
-        [cell addSubview:pollView];
+        if([[((UIButton*)[cell viewWithTag:9]).titleLabel text]isEqualToString:@"توقع الأن و إربح !"])
+        {
+            PollView* pollView = [[PollView alloc]init];
+            pollView = [pollView initWithNib];
+            [pollView setFrame:cell.contentView.frame];
+            
+            [pollView initUI];
+            
+            [cell.layer removeAllAnimations];
+            
+            CATransition *transition = [CATransition animation];
+            transition.duration = 0.5;
+            transition.type = kCATransitionMoveIn;
+            transition.subtype = kCATransitionFromRight;
+            [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+            [cell.layer addAnimation:transition forKey:nil];
+            
+            [cell addSubview:pollView];
+
+        }else if([[((UIButton*)[cell viewWithTag:9]).titleLabel text]isEqualToString:@"شاهد التوقعات"])
+        {
+            PollResultView* pollView = [[PollResultView alloc]init];
+            pollView = [pollView initWithNib];
+            [pollView setFrame:cell.contentView.frame];
+            
+            [pollView initUI];
+            
+            [cell.layer removeAllAnimations];
+            
+            CATransition *transition = [CATransition animation];
+            transition.duration = 0.5;
+            transition.type = kCATransitionMoveIn;
+            transition.subtype = kCATransitionFromRight;
+            [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+            [cell.layer addAnimation:transition forKey:nil];
+            
+            [cell addSubview:pollView];
+
+        }else if([[((UIButton*)[cell viewWithTag:9]).titleLabel text]isEqualToString:@"شاهد الرابح"])
+        {}
     }
 }
 

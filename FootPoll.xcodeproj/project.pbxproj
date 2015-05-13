@@ -65,6 +65,8 @@
 		E8CD0F681B00B0D900AB6642 /* Close-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F651B00B0D900AB6642 /* Close-100@2x.png */; };
 		E8CD0F691B00B0D900AB6642 /* Close-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F661B00B0D900AB6642 /* Close-100@3x.png */; };
 		E8CD0F6C1B00B98000AB6642 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD0F6B1B00B98000AB6642 /* ResetPasswordViewController.m */; };
+		E8D0D40F1B03A6D000C83F52 /* PollResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D0D40E1B03A6D000C83F52 /* PollResultView.m */; };
+		E8D0D4111B03A6E400C83F52 /* PollResultView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8D0D4101B03A6E400C83F52 /* PollResultView.xib */; };
 		E8D234031B0252A100244D6D /* New Moon-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234001B0252A100244D6D /* New Moon-100.png */; };
 		E8D234041B0252A100244D6D /* New Moon-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234011B0252A100244D6D /* New Moon-100@2x.png */; };
 		E8D234051B0252A100244D6D /* New Moon-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234021B0252A100244D6D /* New Moon-100@3x.png */; };
@@ -184,6 +186,9 @@
 		E8CD0F661B00B0D900AB6642 /* Close-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Close-100@3x.png"; sourceTree = "<group>"; };
 		E8CD0F6A1B00B98000AB6642 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
 		E8CD0F6B1B00B98000AB6642 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		E8D0D40D1B03A6D000C83F52 /* PollResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PollResultView.h; sourceTree = "<group>"; };
+		E8D0D40E1B03A6D000C83F52 /* PollResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PollResultView.m; sourceTree = "<group>"; };
+		E8D0D4101B03A6E400C83F52 /* PollResultView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PollResultView.xib; sourceTree = "<group>"; };
 		E8D234001B0252A100244D6D /* New Moon-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New Moon-100.png"; sourceTree = "<group>"; };
 		E8D234011B0252A100244D6D /* New Moon-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New Moon-100@2x.png"; sourceTree = "<group>"; };
 		E8D234021B0252A100244D6D /* New Moon-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "New Moon-100@3x.png"; sourceTree = "<group>"; };
@@ -353,6 +358,9 @@
 				E8AA0E121B033F5E00C3B204 /* PollView.xib */,
 				E8AA0E141B033F8400C3B204 /* PollView.h */,
 				E8AA0E151B033F8400C3B204 /* PollView.m */,
+				E8D0D40D1B03A6D000C83F52 /* PollResultView.h */,
+				E8D0D40E1B03A6D000C83F52 /* PollResultView.m */,
+				E8D0D4101B03A6E400C83F52 /* PollResultView.xib */,
 			);
 			path = FootPoll;
 			sourceTree = "<group>";
@@ -620,6 +628,7 @@
 				E8A20F001B00FA7E00EFB8E6 /* Statistics-100.png in Resources */,
 				E8F2A6B61AFF75CE00BBF3B6 /* background-black-elegant-in-color-photos-139913-640x960@3x.jpg in Resources */,
 				E8F2A6B51AFF75CE00BBF3B6 /* background-black-elegant-in-color-photos-139913-640x960@2x.jpg in Resources */,
+				E8D0D4111B03A6E400C83F52 /* PollResultView.xib in Resources */,
 				E8CD0F681B00B0D900AB6642 /* Close-100@2x.png in Resources */,
 				E8A20F171B010DF000EFB8E6 /* tableViewBG@3x.png in Resources */,
 				E84A3EC41B011FF3002E043D /* cross.png in Resources */,
@@ -691,6 +700,7 @@
 				E8CD0F491B0083D400AB6642 /* AddUserViewController.m in Sources */,
 				E84A3EBD1B011FA2002E043D /* VCFloatingActionButton.m in Sources */,
 				E8F2A6DA1AFF982000BBF3B6 /* MCFadeSegue.m in Sources */,
+				E8D0D40F1B03A6D000C83F52 /* PollResultView.m in Sources */,
 				E8F2A7031AFFB4D800BBF3B6 /* CRToastManager.m in Sources */,
 				E8AA0E161B033F8400C3B204 /* PollView.m in Sources */,
 				E8F2A6811AFF4BDA00BBF3B6 /* AppDelegate.m in Sources */,

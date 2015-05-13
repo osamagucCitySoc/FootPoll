@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FootPoll-iOSPlot.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FootPoll.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>29023FCF40EBAEF13C8F6533</key>
+		<key>1C1360F04A22E6E1C4E0F5B3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDCF4E269D21E95B53C1A859</key>
+		<key>9E85724E8D290D58847A7EF3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FDCA3956CB19E8B0E92912BB</key>
+		<key>D3568186B6B74BB84FAD5A91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DB4937B78D6C42CC53745335</key>
 		<dict>
 			<key>primary</key>
 			<true/>
