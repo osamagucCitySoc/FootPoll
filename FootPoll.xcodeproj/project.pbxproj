@@ -41,6 +41,7 @@
 		E8A20F171B010DF000EFB8E6 /* tableViewBG@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F141B010DF000EFB8E6 /* tableViewBG@3x.png */; };
 		E8A20F181B010DF000EFB8E6 /* tableViewBG.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F151B010DF000EFB8E6 /* tableViewBG.png */; };
 		E8A20F191B010DF000EFB8E6 /* tableViewBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8A20F161B010DF000EFB8E6 /* tableViewBG@2x.png */; };
+		E8AA0E111B03206C00C3B204 /* WinnersHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8AA0E101B03206C00C3B204 /* WinnersHistoryViewController.m */; };
 		E8CD0F491B0083D400AB6642 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD0F481B0083D400AB6642 /* AddUserViewController.m */; };
 		E8CD0F571B009C0D00AB6642 /* clubs.json in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F561B009C0D00AB6642 /* clubs.json */; };
 		E8CD0F5B1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F581B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png */; };
@@ -144,6 +145,8 @@
 		E8A20F141B010DF000EFB8E6 /* tableViewBG@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBG@3x.png"; sourceTree = "<group>"; };
 		E8A20F151B010DF000EFB8E6 /* tableViewBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tableViewBG.png; sourceTree = "<group>"; };
 		E8A20F161B010DF000EFB8E6 /* tableViewBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tableViewBG@2x.png"; sourceTree = "<group>"; };
+		E8AA0E0F1B03206C00C3B204 /* WinnersHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WinnersHistoryViewController.h; sourceTree = "<group>"; };
+		E8AA0E101B03206C00C3B204 /* WinnersHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WinnersHistoryViewController.m; sourceTree = "<group>"; };
 		E8CD0F471B0083D400AB6642 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		E8CD0F481B0083D400AB6642 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		E8CD0F561B009C0D00AB6642 /* clubs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clubs.json; sourceTree = "<group>"; };
@@ -322,6 +325,8 @@
 				E8F2A6881AFF4BDA00BBF3B6 /* Images.xcassets */,
 				E8F2A68A1AFF4BDA00BBF3B6 /* LaunchScreen.xib */,
 				E8F2A67B1AFF4BDA00BBF3B6 /* Supporting Files */,
+				E8AA0E0F1B03206C00C3B204 /* WinnersHistoryViewController.h */,
+				E8AA0E101B03206C00C3B204 /* WinnersHistoryViewController.m */,
 			);
 			path = FootPoll;
 			sourceTree = "<group>";
@@ -635,6 +640,7 @@
 				E8F2A7061AFFB4D800BBF3B6 /* CRToastWindow.m in Sources */,
 				E8A20F0F1B01002100EFB8E6 /* AllMatchesViewController.m in Sources */,
 				E8F2A6841AFF4BDA00BBF3B6 /* ViewController.m in Sources */,
+				E8AA0E111B03206C00C3B204 /* WinnersHistoryViewController.m in Sources */,
 				E8F2A7021AFFB4D800BBF3B6 /* CRToast.m in Sources */,
 				E8F2A7041AFFB4D800BBF3B6 /* CRToastView.m in Sources */,
 				E8CD0F491B0083D400AB6642 /* AddUserViewController.m in Sources */,

@@ -156,6 +156,9 @@
     }else if(row == 1)
     {
         [self performSegueWithIdentifier:@"RankingSeg" sender:self];
+    }else if(row == 2)
+    {
+        [self performSegueWithIdentifier:@"WinnersSeg" sender:self];
     }
 }
 /*
