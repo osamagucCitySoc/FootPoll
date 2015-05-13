@@ -50,6 +50,9 @@
 		E8AA0E261B0350DD00C3B204 /* Plus Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E231B0350DD00C3B204 /* Plus Filled-100.png */; };
 		E8AA0E271B0350DD00C3B204 /* Plus Filled-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E241B0350DD00C3B204 /* Plus Filled-100@2x.png */; };
 		E8AA0E281B0350DD00C3B204 /* Plus Filled-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E251B0350DD00C3B204 /* Plus Filled-100@3x.png */; };
+		E8AA0E2C1B03693F00C3B204 /* Cancel-100.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E291B03693F00C3B204 /* Cancel-100.png */; };
+		E8AA0E2D1B03693F00C3B204 /* Cancel-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E2A1B03693F00C3B204 /* Cancel-100@2x.png */; };
+		E8AA0E2E1B03693F00C3B204 /* Cancel-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8AA0E2B1B03693F00C3B204 /* Cancel-100@3x.png */; };
 		E8CD0F491B0083D400AB6642 /* AddUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CD0F481B0083D400AB6642 /* AddUserViewController.m */; };
 		E8CD0F571B009C0D00AB6642 /* clubs.json in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F561B009C0D00AB6642 /* clubs.json */; };
 		E8CD0F5B1B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CD0F581B00AEC800AB6642 /* 7275b4d8bd0b00d36c0c506eb2047020.jpg.png */; };
@@ -164,6 +167,9 @@
 		E8AA0E231B0350DD00C3B204 /* Plus Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus Filled-100.png"; sourceTree = "<group>"; };
 		E8AA0E241B0350DD00C3B204 /* Plus Filled-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus Filled-100@2x.png"; sourceTree = "<group>"; };
 		E8AA0E251B0350DD00C3B204 /* Plus Filled-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Plus Filled-100@3x.png"; sourceTree = "<group>"; };
+		E8AA0E291B03693F00C3B204 /* Cancel-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cancel-100.png"; sourceTree = "<group>"; };
+		E8AA0E2A1B03693F00C3B204 /* Cancel-100@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cancel-100@2x.png"; sourceTree = "<group>"; };
+		E8AA0E2B1B03693F00C3B204 /* Cancel-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cancel-100@3x.png"; sourceTree = "<group>"; };
 		E8CD0F471B0083D400AB6642 /* AddUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserViewController.h; sourceTree = "<group>"; };
 		E8CD0F481B0083D400AB6642 /* AddUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserViewController.m; sourceTree = "<group>"; };
 		E8CD0F561B009C0D00AB6642 /* clubs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = clubs.json; sourceTree = "<group>"; };
@@ -405,6 +411,9 @@
 		E8F2A6F41AFFB32600BBF3B6 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E8AA0E291B03693F00C3B204 /* Cancel-100.png */,
+				E8AA0E2A1B03693F00C3B204 /* Cancel-100@2x.png */,
+				E8AA0E2B1B03693F00C3B204 /* Cancel-100@3x.png */,
 				E8AA0E231B0350DD00C3B204 /* Plus Filled-100.png */,
 				E8AA0E241B0350DD00C3B204 /* Plus Filled-100@2x.png */,
 				E8AA0E251B0350DD00C3B204 /* Plus Filled-100@3x.png */,
@@ -552,6 +561,7 @@
 				E8D234031B0252A100244D6D /* New Moon-100.png in Resources */,
 				E8AA0E1D1B034E6500C3B204 /* Minus Filled-100.png in Resources */,
 				E84A3EDB1B0121ED002E043D /* Olympic Medal-100@3x.png in Resources */,
+				E8AA0E2C1B03693F00C3B204 /* Cancel-100.png in Resources */,
 				E8D234051B0252A100244D6D /* New Moon-100@3x.png in Resources */,
 				E8CD0F671B00B0D900AB6642 /* Close-100.png in Resources */,
 				E8F2A6871AFF4BDA00BBF3B6 /* Main.storyboard in Resources */,
@@ -582,9 +592,11 @@
 				E8A20F081B00FBA700EFB8E6 /* Online-100@3x.png in Resources */,
 				E84A3ED41B0120CA002E043D /* Ratings Filled-100@2x.png in Resources */,
 				E8AA0E271B0350DD00C3B204 /* Plus Filled-100@2x.png in Resources */,
+				E8AA0E2D1B03693F00C3B204 /* Cancel-100@2x.png in Resources */,
 				E8A20F061B00FBA700EFB8E6 /* Online-100.png in Resources */,
 				E8F2A6D31AFF8FC500BBF3B6 /* Delete Sign-100@2x.png in Resources */,
 				E8D2340B1B0256FF00244D6D /* User-100@3x.png in Resources */,
+				E8AA0E2E1B03693F00C3B204 /* Cancel-100@3x.png in Resources */,
 				E8AA0E131B033F5E00C3B204 /* PollView.xib in Resources */,
 				E8F2A6D41AFF8FC500BBF3B6 /* Delete Sign-100@3x.png in Resources */,
 				E84A3EDA1B0121ED002E043D /* Olympic Medal-100@2x.png in Resources */,

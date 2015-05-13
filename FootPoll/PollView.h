@@ -18,6 +18,13 @@
 @property (weak, nonatomic) IBOutlet UIImageView *clubOneFlag;
 @property (weak, nonatomic) IBOutlet UILabel *clubOneName;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UILabel *clubOneScore;
+@property (weak, nonatomic) IBOutlet UILabel *clubTwoScore;
 
+- (IBAction)decreaseClubOneClicked:(id)sender;
+- (IBAction)increaseClubOneClicked:(id)sender;
+- (IBAction)increaseClubTwoClicked:(id)sender;
+- (IBAction)decreaseClubTwoClicked:(id)sender;
+- (IBAction)cancelButtonClicked:(id)sender;
 @end
 

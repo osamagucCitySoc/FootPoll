@@ -53,4 +53,61 @@
     self.submitButton.titleLabel.font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
 }
 
+- (IBAction)decreaseClubOneClicked:(id)sender {
+    
+    int clubOne = [[self.clubOneScore text] intValue];
+    clubOne--;
+    if(clubOne < 0)
+    {
+        clubOne = 0;
+    }
+    
+    [self.clubOneScore setText:[NSString stringWithFormat:@"%i",clubOne]];
+    
+}
+
+- (IBAction)increaseClubOneClicked:(id)sender {
+    
+    int clubOne = [[self.clubOneScore text] intValue];
+    clubOne++;
+    [self.clubOneScore setText:[NSString stringWithFormat:@"%i",clubOne]];
+
+}
+
+- (IBAction)increaseClubTwoClicked:(id)sender {
+    
+    int clubOne = [[self.clubTwoScore text] intValue];
+    clubOne++;
+    [self.clubTwoScore setText:[NSString stringWithFormat:@"%i",clubOne]];
+}
+
+- (IBAction)decreaseClubTwoClicked:(id)sender {
+    
+    int clubOne = [[self.clubTwoScore text] intValue];
+    clubOne--;
+    if(clubOne < 0)
+    {
+        clubOne = 0;
+    }
+    
+    [self.clubTwoScore setText:[NSString stringWithFormat:@"%i",clubOne]];
+    
+}
+
+- (IBAction)cancelButtonClicked:(id)sender {
+    
+    [UIView animateWithDuration:0.5
+                          delay: 0
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         CGRect rect = self.frame;
+                         rect.origin.x = rect.size.width+10;
+                         self.alpha = 0;
+                         self.frame = rect;
+                     }
+                     completion:^(BOOL finished){
+                         [self removeFromSuperview];
+                     }];
+    
+}
 @end

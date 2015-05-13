@@ -5,15 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PollView">
-            <connections>
-                <outlet property="clubOneFlag" destination="8Aw-xR-mzG" id="Gh1-4z-Qjz"/>
-                <outlet property="clubOneName" destination="8Cy-zf-mJR" id="Yb3-4x-q07"/>
-                <outlet property="clubTwoFlag" destination="pr5-en-53E" id="lmX-Ez-AD3"/>
-                <outlet property="clubTwoName" destination="WBz-y9-nqP" id="Nqn-Kw-bP1"/>
-                <outlet property="submitButton" destination="rPE-o0-BeJ" id="heL-Mk-daS"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PollView"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PollView">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -178,6 +170,9 @@
                             <include reference="kOe-XU-XOv"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="increaseClubTwoClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="WtU-Gx-5fW"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uNz-M9-IMv">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -200,6 +195,34 @@
                             <include reference="T87-fa-4on"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="decreaseClubTwoClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="k99-WN-1Sc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0g-lU-gno">
+                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="7Cm-fu-F40"/>
+                        <constraint firstAttribute="height" constant="32" id="Vie-0b-sNP"/>
+                    </constraints>
+                    <state key="normal" image="Minus Filled-100.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Vie-0b-sNP"/>
+                            <exclude reference="7Cm-fu-F40"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="Vie-0b-sNP"/>
+                            <include reference="7Cm-fu-F40"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="decreaseClubOneClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="TjH-dJ-hg3"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-WH-3hV">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -222,6 +245,9 @@
                             <include reference="hOe-3i-hN5"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="increaseClubOneClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="A6u-UL-eqb"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDh-mx-vlU">
                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -267,27 +293,30 @@
                         </mask>
                     </variation>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0g-lU-gno">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhu-BU-zKE">
                     <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="32" id="7Cm-fu-F40"/>
-                        <constraint firstAttribute="height" constant="32" id="Vie-0b-sNP"/>
+                        <constraint firstAttribute="height" constant="32" id="2Ss-L8-UWo"/>
+                        <constraint firstAttribute="width" constant="32" id="3xN-Zt-zIV"/>
                     </constraints>
-                    <state key="normal" image="Minus Filled-100.png">
+                    <state key="normal" image="Cancel-100.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="Vie-0b-sNP"/>
-                            <exclude reference="7Cm-fu-F40"/>
+                            <exclude reference="2Ss-L8-UWo"/>
+                            <exclude reference="3xN-Zt-zIV"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="Vie-0b-sNP"/>
-                            <include reference="7Cm-fu-F40"/>
+                            <include reference="2Ss-L8-UWo"/>
+                            <include reference="3xN-Zt-zIV"/>
                         </mask>
                     </variation>
+                    <connections>
+                        <action selector="cancelButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="qsf-uv-ygj"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="0.96999999999999997" colorSpace="calibratedRGB"/>
@@ -296,6 +325,7 @@
                 <constraint firstItem="CnM-zA-B7F" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="6F7-bR-FNj"/>
                 <constraint firstItem="Pry-JO-2xi" firstAttribute="leading" secondItem="VDh-mx-vlU" secondAttribute="trailing" constant="10" id="8ZH-VM-pbk"/>
                 <constraint firstAttribute="centerY" secondItem="d0g-lU-gno" secondAttribute="centerY" id="A4p-TM-YJm"/>
+                <constraint firstItem="Qhu-BU-zKE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Au6-tq-DEd"/>
                 <constraint firstAttribute="centerY" secondItem="Pry-JO-2xi" secondAttribute="centerY" id="D3y-9H-Mqt"/>
                 <constraint firstItem="CnM-zA-B7F" firstAttribute="leading" secondItem="pr5-en-53E" secondAttribute="trailing" constant="8" id="E5w-ty-XSc"/>
                 <constraint firstAttribute="centerX" secondItem="rPE-o0-BeJ" secondAttribute="centerX" id="GaO-sx-C5c"/>
@@ -314,6 +344,7 @@
                 <constraint firstAttribute="bottom" secondItem="rPE-o0-BeJ" secondAttribute="bottom" constant="8" id="c7D-J3-NXi"/>
                 <constraint firstAttribute="centerX" secondItem="CnM-zA-B7F" secondAttribute="centerX" id="cOa-Cj-6lw"/>
                 <constraint firstItem="Dbe-WH-3hV" firstAttribute="leading" secondItem="CnM-zA-B7F" secondAttribute="trailing" constant="10" id="cSS-Nc-Q7e"/>
+                <constraint firstItem="Qhu-BU-zKE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="eF1-8d-1h2"/>
                 <constraint firstAttribute="centerY" secondItem="uNz-M9-IMv" secondAttribute="centerY" id="f7W-kj-s0z"/>
                 <constraint firstAttribute="centerY" secondItem="GW7-jM-6rM" secondAttribute="centerY" id="giS-bo-hS1"/>
                 <constraint firstItem="8Aw-xR-mzG" firstAttribute="leading" secondItem="CnM-zA-B7F" secondAttribute="trailing" constant="10" id="ig1-FH-BkL"/>
@@ -333,12 +364,14 @@
                     <exclude reference="CnM-zA-B7F"/>
                     <exclude reference="Pry-JO-2xi"/>
                     <exclude reference="uNz-M9-IMv"/>
-                    <exclude reference="Dbe-WH-3hV"/>
+                    <exclude reference="d0g-lU-gno"/>
                     <exclude reference="VDh-mx-vlU"/>
                     <exclude reference="GW7-jM-6rM"/>
-                    <exclude reference="d0g-lU-gno"/>
+                    <exclude reference="Qhu-BU-zKE"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="Au6-tq-DEd"/>
+                    <exclude reference="eF1-8d-1h2"/>
                     <exclude reference="JNi-iw-ntf"/>
                     <exclude reference="w7d-LF-bdm"/>
                     <exclude reference="f7W-kj-s0z"/>
@@ -380,12 +413,15 @@
                     <include reference="CnM-zA-B7F"/>
                     <include reference="Pry-JO-2xi"/>
                     <include reference="uNz-M9-IMv"/>
+                    <include reference="d0g-lU-gno"/>
                     <include reference="Dbe-WH-3hV"/>
                     <include reference="VDh-mx-vlU"/>
                     <include reference="GW7-jM-6rM"/>
-                    <include reference="d0g-lU-gno"/>
+                    <include reference="Qhu-BU-zKE"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="Au6-tq-DEd"/>
+                    <include reference="eF1-8d-1h2"/>
                     <include reference="JNi-iw-ntf"/>
                     <include reference="w7d-LF-bdm"/>
                     <include reference="f7W-kj-s0z"/>
@@ -418,17 +454,20 @@
                 </mask>
             </variation>
             <connections>
-                <outlet property="clubOneFlag" destination="8Aw-xR-mzG" id="pIi-x5-iSU"/>
-                <outlet property="clubOneName" destination="8Cy-zf-mJR" id="lel-7O-y5X"/>
-                <outlet property="clubTwoFlag" destination="pr5-en-53E" id="sqC-rV-U4C"/>
-                <outlet property="clubTwoName" destination="WBz-y9-nqP" id="e7a-aD-iM7"/>
-                <outlet property="submitButton" destination="rPE-o0-BeJ" id="Xzs-gN-IAn"/>
+                <outlet property="clubOneFlag" destination="8Aw-xR-mzG" id="FAM-LM-dSe"/>
+                <outlet property="clubOneName" destination="8Cy-zf-mJR" id="Zn7-5Q-h7i"/>
+                <outlet property="clubOneScore" destination="GW7-jM-6rM" id="wac-Vj-sQ5"/>
+                <outlet property="clubTwoFlag" destination="pr5-en-53E" id="UvU-3L-nNY"/>
+                <outlet property="clubTwoName" destination="WBz-y9-nqP" id="uoE-Ni-miR"/>
+                <outlet property="clubTwoScore" destination="VDh-mx-vlU" id="tPV-rr-jSV"/>
+                <outlet property="submitButton" destination="rPE-o0-BeJ" id="mIN-CL-7mi"/>
             </connections>
             <point key="canvasLocation" x="342" y="383"/>
         </view>
     </objects>
     <resources>
         <image name="Bayern Munchen.jpg.png" width="25" height="25"/>
+        <image name="Cancel-100.png" width="33" height="33"/>
         <image name="Minus Filled-100.png" width="33" height="33"/>
         <image name="Plus Filled-100.png" width="33" height="33"/>
         <image name="fc-barcelona-456-1-2014-17-2-16.png" width="45" height="45"/>
