@@ -4,7 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-FootPoll-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FootPoll-PNChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FootPoll-PQFCustomLoaders.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FootPoll-UIColor+FlatColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -19,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FootPoll-pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FootPoll.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C1360F04A22E6E1C4E0F5B3</key>
+		<key>2030E09F66A6B5DE060A9AFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E85724E8D290D58847A7EF3</key>
+		<key>632E247F3E2B505C54DEAD5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D3568186B6B74BB84FAD5A91</key>
+		<key>799A865AAF5983BF7E15153D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB4937B78D6C42CC53745335</key>
+		<key>99E74B580BB0F803E0F63F94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B915D42FC09BB1EDCDA336C5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE90E5BEA2A7638A8EE69BBE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E27D0E1FE2AA27E7BE1A3C44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD766A04F24DDD1A17861A76</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -367,7 +367,6 @@ static NSDictionary *                kCRToastKeyClassMap                    = ni
     notification.state = CRToastStateWaiting;
     notification.uuid = [NSUUID UUID];
     notification.appearance = appearance;
-	
     return notification;
 }
 
@@ -573,9 +572,9 @@ static NSDictionary *                kCRToastKeyClassMap                    = ni
 }
 
 - (NSTimeInterval)animateInTimeInterval {
-    return _options[kCRToastAnimationInTimeIntervalKey] ?
+    return 0.3;/*_options[kCRToastAnimationInTimeIntervalKey] ?
     [_options[kCRToastAnimationInTimeIntervalKey] doubleValue] :
-    kCRAnimateInTimeIntervalDefault;
+    kCRAnimateInTimeIntervalDefault;*/
 }
 
 - (NSTimeInterval)timeInterval {
@@ -585,9 +584,9 @@ static NSDictionary *                kCRToastKeyClassMap                    = ni
 }
 
 - (NSTimeInterval)animateOutTimeInterval {
-    return _options[kCRToastAnimationOutTimeIntervalKey] ?
+    return 0.3;/*_options[kCRToastAnimationOutTimeIntervalKey] ?
     [_options[kCRToastAnimationOutTimeIntervalKey] doubleValue] :
-    kCRAnimateOutTimeIntervalDefault;
+    kCRAnimateOutTimeIntervalDefault;*/
 }
 
 - (CGFloat)animationSpringInitialVelocity {

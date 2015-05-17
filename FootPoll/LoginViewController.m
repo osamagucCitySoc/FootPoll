@@ -9,7 +9,9 @@
 #import "LoginViewController.h"
 #import "CRToastManager.h"
 #import "CRToast.h"
-
+#import "AFHTTPRequestOperationManager.h"
+#import "AllMatchesViewController.h"
+#import <PQFCustomLoaders/PQFCustomLoaders.h>
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *hintLabel;
@@ -18,10 +20,19 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *forgetPasswordButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
+@property (nonatomic, strong) PQFBouncingBalls *bouncingBalls;
 @end
 
 @implementation LoginViewController
+{
+    NSDictionary* loggedUser;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    AllMatchesViewController* dst = (AllMatchesViewController*)[segue destinationViewController];
+    [dst setLoggedUser:loggedUser];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,7 +52,7 @@
 
     self.titleLabel.font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:18];
     
-    self.userNameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"البريد الإلكتروني" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:0.691 green:0.691 blue:0.691 alpha:1]}];
+    self.userNameTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"إسم المستخدم" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:0.691 green:0.691 blue:0.691 alpha:1]}];
     self.passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"كلمة السر" attributes:@{NSForegroundColorAttributeName: [UIColor colorWithRed:0.691 green:0.691 blue:0.691 alpha:1]}];
 }
 
@@ -76,4 +87,44 @@
 }
 */
 
+- (IBAction)loginButtonClicked:(id)sender {
+    
+    self.bouncingBalls = [PQFBouncingBalls createModalLoader];
+    self.bouncingBalls.jumpAmount = 50;
+    self.bouncingBalls.zoomAmount = 20;
+    self.bouncingBalls.separation = 20;
+    [self.bouncingBalls showLoader];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSDictionary *parameters = @{@"userName": self.userNameTextField.text,@"userPassword": self.passwordTextField.text};
+    [manager POST:@"http://moh2013.com/arabDevs/FootPoll/login.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+         NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        [self.bouncingBalls removeLoader];
+        if(responseArray.count == 0)
+        {
+            NSDictionary *options = @{
+                                      kCRToastTextKey : @"إسم المستخدم أو كلمة السر خطأ",
+                                      kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                      kCRToastBackgroundColorKey : [UIColor redColor],
+                                      kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                      kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                      };
+            [CRToastManager showNotificationWithOptions:options
+                                        completionBlock:^{
+                                            NSLog(@"Completed");
+                                        }];
+        }else
+        {
+            [self.bouncingBalls removeLoader];
+            loggedUser = [responseArray objectAtIndex:0];
+            [self performSegueWithIdentifier:@"loginSeg" sender:self];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.bouncingBalls removeLoader];
+        NSLog(@"Error: %@", error);
+    }];
+}
 @end

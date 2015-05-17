@@ -343,7 +343,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="البريد الإلكتروني" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNk-Nu-HMr">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="إسم المستخدم" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FNk-Nu-HMr">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -351,7 +351,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.92540218090000004" green="0.92060735100000002" blue="0.93019701089999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="usP-7X-ZNf"/>
@@ -389,7 +389,7 @@
                                     <constraint firstAttribute="height" constant="91" id="xYM-eU-HVD"/>
                                 </constraints>
                                 <string key="text">برجاء الدخول بإستعمال نفس
-البريد الإلكتروني و كلمة السر المستخدمة
+إسم المستخدم و كلمة السر المستخدمة
  عند تسجيل حسابك</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -455,7 +455,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="U0f-jz-7t6" kind="custom" customClass="MCFadeSegue" id="lAQ-d6-w3l"/>
+                                    <action selector="loginButtonClicked:" destination="dG4-Vv-xeT" eventType="touchUpInside" id="kjl-Rw-nzR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الدخول" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MgI-lg-s51">
@@ -627,6 +627,7 @@
                         <outlet property="passwordTextField" destination="upO-u2-5M6" id="eMu-7k-HMp"/>
                         <outlet property="titleLabel" destination="MgI-lg-s51" id="g7W-VO-Zri"/>
                         <outlet property="userNameTextField" destination="FNk-Nu-HMr" id="9tQ-lV-1A8"/>
+                        <segue destination="U0f-jz-7t6" kind="custom" identifier="loginSeg" customClass="MCFadeSegue" id="rI9-Wl-qLS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="igU-rf-0zr" sceneMemberID="firstResponder"/>
@@ -1615,8 +1616,7 @@
                                                             <exclude reference="sBJ-nP-EeY"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="251" y="16" width="61" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="De7-ql-IeM"/>
                                                             <exclude reference="N1A-c8-8hQ"/>
@@ -1641,8 +1641,7 @@
                                                             <exclude reference="Xnt-Ht-Tmi"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="8" y="16" width="62" height="21"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <exclude reference="A0C-iG-YDj"/>
                                                             <exclude reference="B4j-0P-0pB"/>
@@ -1665,8 +1664,7 @@
                                                             <exclude reference="fbs-Lx-B2m"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="118" y="16" width="85" height="30"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="c08-VJ-fO9"/>
                                                             <include reference="fbs-Lx-B2m"/>
@@ -1707,8 +1705,7 @@
                                                             <exclude reference="rfY-YG-FgR"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="211" y="16" width="32" height="32"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="PJ3-O6-O4L"/>
                                                             <include reference="rfY-YG-FgR"/>
@@ -1727,8 +1724,7 @@
                                                             <exclude reference="OP1-TS-78u"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="78" y="16" width="32" height="32"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <include reference="BVg-v4-Czc"/>
                                                             <include reference="OP1-TS-78u"/>
@@ -1865,8 +1861,7 @@
                                                             <exclude reference="s7u-UX-OFV"/>
                                                         </mask>
                                                     </variation>
-                                                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="215" y="96" width="72" height="30"/>
+                                                    <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
                                                             <exclude reference="aoh-rC-gaU"/>
                                                             <exclude reference="s7u-UX-OFV"/>

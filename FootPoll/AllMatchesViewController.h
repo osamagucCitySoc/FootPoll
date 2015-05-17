@@ -10,4 +10,6 @@
 
 @interface AllMatchesViewController : UIViewController
 
+@property(strong, nonatomic) NSDictionary* loggedUser;
+
 @end
