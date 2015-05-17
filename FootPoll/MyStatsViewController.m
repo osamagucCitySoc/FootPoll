@@ -104,6 +104,8 @@
         
         
         [self.holderView addSubview:self.barChart];
+        
+         self.rankingRealLabel.text = [NSString stringWithFormat:@"%i",[[[responseArray objectAtIndex:3] objectForKey:@"countVotes"] intValue]];
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         [self.bouncingBalls removeLoader];
