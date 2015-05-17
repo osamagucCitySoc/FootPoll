@@ -6,6 +6,7 @@ pod 'PNChart'
 pod 'iOSPlot', '~> 1.0.1'
 pod 'AFNetworking', '~> 2.0'
 pod 'PQFCustomLoaders', '~> 1.0.1'
+pod 'Haneke', '~> 1.0'
 end
 
 target 'FootPollTests' do

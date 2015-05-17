@@ -12,12 +12,18 @@
 #import "VCFloatingActionButton.h"
 #import "PollView.h"
 #import "PollResultView.h"
-
+#import "CRToastManager.h"
+#import "CRToast.h"
+#import "AFHTTPRequestOperationManager.h"
+#import <PQFCustomLoaders/PQFCustomLoaders.h>
+#import <Haneke/Haneke.h>
 
 @interface AllMatchesViewController ()<UITableViewDataSource,UITableViewDelegate,floatMenuDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) PQFBouncingBalls *bouncingBalls;
+@property (nonatomic, strong)UIRefreshControl* refreshControl;
 
 @end
 
@@ -37,6 +43,8 @@
     
     [self.tableView reloadData];
     [self.tableView setNeedsDisplay];
+    
+    [self loadData];
 
 }
 
@@ -59,6 +67,14 @@
     addButton.hideWhileScrolling = YES;
     addButton.delegate = self;
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.backgroundColor = [UIColor clearColor];
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    [self.refreshControl addTarget:self
+                            action:@selector(loadData)
+                  forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
+    
     [self.view addSubview:addButton];
 
 }
@@ -73,7 +89,7 @@
 #pragma table view delegates
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return [[[dataSource objectAtIndex:section] objectForKey:@"games"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -107,7 +123,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return dataSource.count;
 }
 
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -127,16 +143,34 @@
     ((UILabel*)[cell viewWithTag:8]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     
     
-    if([indexPath row]%3 == 0)
+    NSDictionary* currentGame = [[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row];
+    
+    
+    if([[currentGame objectForKey:@"status"] isEqualToString:@"لم تبدأ"])
     {
         [((UIButton*)[cell viewWithTag:9]) setTitle:@"توقع الأن و إربح !" forState:UIControlStateNormal];
-    }else if([indexPath row]%3 == 1)
+    }else if([[currentGame objectForKey:@"status"] isEqualToString:@"الأن"])
     {
         [((UIButton*)[cell viewWithTag:9]) setTitle:@"شاهد التوقعات" forState:UIControlStateNormal];
-    }else if([indexPath row]%3 == 2)
+    }else
     {
         [((UIButton*)[cell viewWithTag:9]) setTitle: @"شاهد الرابح" forState:UIControlStateNormal];
     }
+    
+    
+    [((UILabel*)[cell viewWithTag:1]) setText:[currentGame objectForKey:@"teamOneName"]];
+    [((UIImageView*)[cell viewWithTag:2]) hnk_setImageFromURL:[NSURL URLWithString:[currentGame objectForKey:@"teamOneFlag"]]];
+    
+    [((UILabel*)[cell viewWithTag:5]) setText:[currentGame objectForKey:@"teamTwoName"]];
+    [((UIImageView*)[cell viewWithTag:4]) hnk_setImageFromURL:[NSURL URLWithString:[currentGame objectForKey:@"teamTwoFlag"]]];
+    
+    [((UILabel*)[cell viewWithTag:8]) setText:[currentGame objectForKey:@"clock"]];
+    [((UILabel*)[cell viewWithTag:7]) setText:[currentGame objectForKey:@"votes"]];
+    [((UILabel*)[cell viewWithTag:6]) setText:[currentGame objectForKey:@"status"]];
+    [((UILabel*)[cell viewWithTag:3]) setText:[currentGame objectForKey:@"score"]];
+    
+    
+    
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -149,7 +183,7 @@
     tempLabel.shadowColor = [UIColor blackColor];
     tempLabel.shadowOffset = CGSizeMake(0,2);
     tempLabel.textColor = [UIColor grayColor]; //here you can change the text color of header.
-    tempLabel.text= @"دوري أبطال أوروبا";
+    tempLabel.text= [[dataSource objectAtIndex:section]objectForKey:@"champion"];
     tempLabel.font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     tempLabel.textAlignment = NSTextAlignmentLeft;
     
@@ -233,6 +267,52 @@
     {
         [self performSegueWithIdentifier:@"WinnersSeg" sender:self];
     }
+}
+
+
+-(void)loadData
+{
+    [self.refreshControl endRefreshing];
+    
+    
+    self.bouncingBalls = [PQFBouncingBalls createModalLoader];
+    self.bouncingBalls.jumpAmount = 50;
+    self.bouncingBalls.zoomAmount = 20;
+    self.bouncingBalls.separation = 20;
+    [self.bouncingBalls showLoader];
+
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET:@"http://moh2013.com/arabDevs/FootPoll/getGames.php" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        [self.bouncingBalls removeLoader];
+        if(responseArray.count == 0)
+        {
+            NSDictionary *options = @{
+                                      kCRToastTextKey : @"لا يوجد مباريات لليوم",
+                                      kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                      kCRToastBackgroundColorKey : [UIColor redColor],
+                                      kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                      kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                      };
+            [CRToastManager showNotificationWithOptions:options
+                                        completionBlock:^{
+                                            NSLog(@"Completed");
+                                        }];
+        }else
+        {
+            [self.bouncingBalls removeLoader];
+            dataSource = [[NSArray alloc]initWithArray:responseArray copyItems:YES];
+            [self.tableView reloadData];
+            [self.tableView setNeedsDisplay];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.bouncingBalls removeLoader];
+        NSLog(@"Error: %@", error);
+    }];
 }
 /*
 #pragma mark - Navigation

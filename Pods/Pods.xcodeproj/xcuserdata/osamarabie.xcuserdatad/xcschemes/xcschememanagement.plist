@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-FootPoll-Haneke.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-FootPoll-PNChart.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,42 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2030E09F66A6B5DE060A9AFE</key>
+		<key>1297AC47A18835B76A126A91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>632E247F3E2B505C54DEAD5F</key>
+		<key>199E8672D37F8261E58908AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>799A865AAF5983BF7E15153D</key>
+		<key>1DF920422C2FE5C81D335F25</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>99E74B580BB0F803E0F63F94</key>
+		<key>3E87D97FFFC37606D6EEAB59</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B915D42FC09BB1EDCDA336C5</key>
+		<key>5CCADDE34F7B47E13FB56776</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE90E5BEA2A7638A8EE69BBE</key>
+		<key>5DA3B8992FB99907A2B1FE07</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E27D0E1FE2AA27E7BE1A3C44</key>
+		<key>BACC881D8440CB25E0A62DBD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FD766A04F24DDD1A17861A76</key>
+		<key>C8400DCA974DABBCFFFADA60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E42DFD3A5AB2B0BE8D69CD8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

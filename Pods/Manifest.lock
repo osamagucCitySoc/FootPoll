@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Haneke (1.0.1)
   - iOSPlot (1.0.1)
   - PNChart (0.8.3):
     - UICountingLabel (~> 1.2.0)
@@ -32,12 +33,14 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - Haneke (~> 1.0)
   - iOSPlot (~> 1.0.1)
   - PNChart
   - PQFCustomLoaders (~> 1.0.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  Haneke: d60be8b96b228633b24708dd153169d6849d6f78
   iOSPlot: b68b565b1f625f1e43badfaebea58cc8fa4ec6b7
   PNChart: 8d81e061ec4845915184755d8da84f385ca1cb28
   pop: 628ffc631644601567ee8bfaaaea493ebd7d0923
