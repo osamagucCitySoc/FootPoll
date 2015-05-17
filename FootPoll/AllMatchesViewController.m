@@ -17,6 +17,7 @@
 #import "AFHTTPRequestOperationManager.h"
 #import <PQFCustomLoaders/PQFCustomLoaders.h>
 #import <Haneke/Haneke.h>
+#import "MyStatsViewController.h"
 
 @interface AllMatchesViewController ()<UITableViewDataSource,UITableViewDelegate,floatMenuDelegate>
 
@@ -32,6 +33,16 @@
     NSArray* dataSource;
     VCFloatingActionButton *addButton;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier]isEqualToString:@"MyStatsSeg"])
+    {
+        MyStatsViewController* dst = (MyStatsViewController*)[segue destinationViewController];
+        [dst setLoggedUser:self.loggedUser];
+    }
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

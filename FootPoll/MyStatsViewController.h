@@ -10,4 +10,6 @@
 
 @interface MyStatsViewController : UIViewController
 
+@property(nonatomic,strong) NSDictionary* loggedUser;
+
 @end
