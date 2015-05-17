@@ -332,7 +332,63 @@
             }];
 
         }else if([[((UIButton*)[cell viewWithTag:9]).titleLabel text]isEqualToString:@"شاهد الرابح"])
-        {}
+        {
+            self.bouncingBalls = [PQFBouncingBalls createModalLoader];
+            self.bouncingBalls.jumpAmount = 50;
+            self.bouncingBalls.zoomAmount = 20;
+            self.bouncingBalls.separation = 20;
+            [self.bouncingBalls showLoader];
+            
+            
+            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+            manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+            
+            NSDictionary* params = @{@"gameID":[[[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row] objectForKey:@"id"]};
+            
+            [manager POST:@"http://moh2013.com/arabDevs/FootPoll/getWinnerForGame.php" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                
+                [self.bouncingBalls removeLoader];
+                
+                
+                NSArray* votes = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+                
+                if(votes.count == 0)
+                {
+                    NSDictionary *options = @{
+                                              kCRToastTextKey : @"لا يوجد رابح لهذه المباراة",
+                                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                              kCRToastBackgroundColorKey : [UIColor redColor],
+                                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                              };
+                    [CRToastManager showNotificationWithOptions:options
+                                                completionBlock:^{
+                                                    NSLog(@"Completed");
+                                                }];
+                }else
+                {
+                    NSDictionary *options = @{
+                                              kCRToastTextKey : [[votes objectAtIndex:0] objectForKey:@"username"],
+                                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                              kCRToastBackgroundColorKey : [UIColor blueColor],
+                                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                              };
+                    [CRToastManager showNotificationWithOptions:options
+                                                completionBlock:^{
+                                                    NSLog(@"Completed");
+                                                }];
+                }
+                
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [self.bouncingBalls removeLoader];
+                NSLog(@"Error: %@", error);
+            }];
+        }
     }
 }
 
