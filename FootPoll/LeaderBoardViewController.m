@@ -8,11 +8,17 @@
 
 #import "LeaderBoardViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "CRToastManager.h"
+#import "CRToast.h"
+#import "AFHTTPRequestOperationManager.h"
+#import <PQFCustomLoaders/PQFCustomLoaders.h>
+#import <Haneke/Haneke.h>
 
 @interface LeaderBoardViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) PQFBouncingBalls *bouncingBalls;
 
 @end
 
@@ -28,6 +34,7 @@
     [self.tableView setDelegate:self];
     [self.tableView setDataSource:self];
 
+    [self loadData];
 
 }
 
@@ -51,7 +58,7 @@
 #pragma table view delegates
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 100;
+    return dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,6 +73,10 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    
+   
+
     
     return cell;
 }
@@ -91,6 +102,55 @@
     ((UIView*)[cell viewWithTag:1]).layer.borderColor = [UIColor colorWithRed:1 green:0.549 blue:0 alpha:1].CGColor;
     ((UIView*)[cell viewWithTag:1]).layer.borderWidth = 1.0f;
     
+    NSDictionary* currentDict = [dataSource objectAtIndex:indexPath.row];
+    ((UILabel*)[cell viewWithTag:2]).text = [currentDict objectForKey:@"username"];
+    ((UILabel*)[cell viewWithTag:3]).text = [NSString stringWithFormat:@"%@ : %@",@"عدد التوقعات الرابحة",[currentDict objectForKey:@"winningCount"]];
+    
+}
+
+
+
+
+-(void)loadData
+{
+    self.bouncingBalls = [PQFBouncingBalls createModalLoader];
+    self.bouncingBalls.jumpAmount = 50;
+    self.bouncingBalls.zoomAmount = 20;
+    self.bouncingBalls.separation = 20;
+    [self.bouncingBalls showLoader];
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [manager GET:@"http://moh2013.com/arabDevs/FootPoll/getLeaderBoard.php" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+        [self.bouncingBalls removeLoader];
+        if(responseArray.count == 0)
+        {
+            NSDictionary *options = @{
+                                      kCRToastTextKey : @"لا يوجد رابحين إلى الأن",
+                                      kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                      kCRToastBackgroundColorKey : [UIColor redColor],
+                                      kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                      kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                      };
+            [CRToastManager showNotificationWithOptions:options
+                                        completionBlock:^{
+                                            NSLog(@"Completed");
+                                        }];
+        }else
+        {
+            [self.bouncingBalls removeLoader];
+            dataSource = [[NSArray alloc]initWithArray:responseArray copyItems:YES];
+            [self.tableView reloadData];
+            [self.tableView setNeedsDisplay];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.bouncingBalls removeLoader];
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 
