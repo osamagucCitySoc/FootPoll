@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UILabel *clubOneScore;
 @property (weak, nonatomic) IBOutlet UILabel *clubTwoScore;
+@property (nonatomic, weak) NSString* gameID;
+@property (nonatomic, weak) NSString* userID;
 
 - (IBAction)decreaseClubOneClicked:(id)sender;
 - (IBAction)increaseClubOneClicked:(id)sender;

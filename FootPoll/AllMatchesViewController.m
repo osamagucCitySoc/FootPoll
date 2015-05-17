@@ -245,6 +245,15 @@
                     pollView.clubTwoScore.text = [scores objectAtIndex:1];
                 }
                 
+                [pollView.clubOneFlag setImage:[((UIImageView*)[cell viewWithTag:2]) image]];
+                [pollView.clubTwoFlag setImage:[((UIImageView*)[cell viewWithTag:4]) image]];
+                
+                [pollView.clubOneName setText:[((UILabel*)[cell viewWithTag:1]) text]];
+                [pollView.clubTwoName setText:[((UILabel*)[cell viewWithTag:5]) text]];
+                
+                pollView.gameID = [[[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"]objectAtIndex:indexPath.row] objectForKey:@"id"];
+                pollView.userID = [self.loggedUser objectForKey:@"id"];
+                
                 [cell.layer removeAllAnimations];
                 
                 CATransition *transition = [CATransition animation];
