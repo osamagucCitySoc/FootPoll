@@ -669,7 +669,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="إسم المستخدم" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mw5-Tj-79J">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="إسم المستخدم" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mw5-Tj-79J">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -820,7 +820,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="البريد الإلكتروني" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R95-F1-hzj">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="البريد الإلكتروني" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R95-F1-hzj">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -840,7 +840,7 @@
                                     </mask>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة السر" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVK-yB-j1Z">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="كلمة السر" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hVK-yB-j1Z">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -907,6 +907,9 @@
                                         <include reference="hjo-zN-OXo"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="Mfd-iQ-Tbg" eventType="touchUpInside" id="jWO-lg-kbC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="حساب جديد" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VqK-W9-VwU">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -1291,6 +1294,7 @@
                         <outlet property="titleLabel" destination="VqK-W9-VwU" id="uQk-uy-cDz"/>
                         <outlet property="userNameTextField" destination="R95-F1-hzj" id="UJb-1A-HsR"/>
                         <outlet property="usernameTextField" destination="mw5-Tj-79J" id="Sbt-Sk-Jn7"/>
+                        <segue destination="U0f-jz-7t6" kind="custom" identifier="loginSeg2" customClass="MCFadeSegue" id="FUZ-es-pgQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcm-i7-Hdg" sceneMemberID="firstResponder"/>
@@ -3582,4 +3586,7 @@
         <image name="logo.png" width="152" height="146"/>
         <image name="tableViewBG.png" width="250" height="431"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FUZ-es-pgQ"/>
+    </inferredMetricsTieBreakers>
 </document>

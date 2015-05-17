@@ -7,6 +7,11 @@
 //
 
 #import "AddUserViewController.h"
+#import "CRToastManager.h"
+#import "CRToast.h"
+#import "AFHTTPRequestOperationManager.h"
+#import "AllMatchesViewController.h"
+#import <PQFCustomLoaders/PQFCustomLoaders.h>
 #define k_KEYBOARD_OFFSET 80.0
 
 
@@ -21,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UIView *clubChoosingView;
 @property (weak, nonatomic) IBOutlet UITableView *clubChoosingTable;
-
+@property (nonatomic, strong) PQFBouncingBalls *bouncingBalls;
 @end
 
 @implementation AddUserViewController
@@ -31,7 +36,18 @@
     CGRect originalClubViewFrame;
     CGRect hideClubViewFrame;
     NSArray* dataSource;
+    NSDictionary* loggedUser;
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier]isEqualToString:@"loginSeg2"])
+    {
+        AllMatchesViewController* dst = (AllMatchesViewController*)[segue destinationViewController];
+        [dst setLoggedUser:loggedUser];
+    }
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -42,10 +58,10 @@
     self.loginButton.titleLabel.font = [UIFont fontWithName:@"DroidArabicKufi" size:22];
     
     
-//    self.chooseClubButton.layer.borderWidth = 1;
-//    self.chooseClubButton.layer.cornerRadius = 5;
-//    self.chooseClubButton.layer.borderColor = [UIColor colorWithRed:0.593 green:0.746 blue:1 alpha:1].CGColor;
-//    self.forgetPasswordButton.titleLabel.font = [UIFont fontWithName:@"DroidArabicKufi" size:12];
+    //    self.chooseClubButton.layer.borderWidth = 1;
+    //    self.chooseClubButton.layer.cornerRadius = 5;
+    //    self.chooseClubButton.layer.borderColor = [UIColor colorWithRed:0.593 green:0.746 blue:1 alpha:1].CGColor;
+    //    self.forgetPasswordButton.titleLabel.font = [UIFont fontWithName:@"DroidArabicKufi" size:12];
     
     self.hintLabel.font = [UIFont fontWithName:@"DroidArabicKufi" size:12];
     
@@ -185,16 +201,16 @@
     NSSortDescriptor *descriptor = [[NSSortDescriptor alloc] initWithKey:@"clubName"  ascending:YES];
     NSArray* clubs = [[dataSource objectAtIndex:indexPath.section] objectForKey:@"countryClubs"];
     clubs = [clubs sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor,nil]];
-
+    
     
     cell.textLabel.font = [UIFont fontWithName:@"DroidArabicKufi" size:12];
     cell.textLabel.textAlignment = NSTextAlignmentRight;
-
+    
     [[cell textLabel]setText:[[clubs objectAtIndex:indexPath.row] objectForKey:@"clubName"]];
     
     [cell.textLabel setNeedsDisplay];
     [cell setNeedsDisplay];
-   
+    
     return cell;
 }
 
@@ -222,7 +238,7 @@
     tempLabel.text= [[dataSource objectAtIndex:section]objectForKey:@"countryName"];
     tempLabel.font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     tempLabel.textAlignment = NSTextAlignmentLeft;
-
+    
     [tempView addSubview:tempLabel];
     
     return tempView;
@@ -273,6 +289,68 @@
                          self.clubChoosingView.alpha = 0;
                      }
                      completion:^(BOOL finished){}];
-
+    
+}
+- (IBAction)loginButtonClicked:(id)sender {
+    
+    
+    if(self.userNameTextField.text.length == 0 || self.usernameTextField.text.length == 0 || self.passwordTextField.text.length == 0 || self.countryTextField.text.length == 0)
+    {
+        NSDictionary *options = @{
+                                  kCRToastTextKey : @"كل البيانات مطلوبة",
+                                  kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                  kCRToastBackgroundColorKey : [UIColor redColor],
+                                  kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                  kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                  kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                  kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                  };
+        [CRToastManager showNotificationWithOptions:options
+                                    completionBlock:^{
+                                        NSLog(@"Completed");
+                                    }];
+        
+    }else
+    {
+        
+        self.bouncingBalls = [PQFBouncingBalls createModalLoader];
+        self.bouncingBalls.jumpAmount = 50;
+        self.bouncingBalls.zoomAmount = 20;
+        self.bouncingBalls.separation = 20;
+        [self.bouncingBalls showLoader];
+        
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        NSDictionary *parameters = @{@"userName": self.usernameTextField.text,@"userPassword": self.passwordTextField.text, @"userEmail":self.userNameTextField.text,@"userClub":self.countryTextField.text};
+        [manager POST:@"http://moh2013.com/arabDevs/FootPoll/newUser.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSArray *responseArray = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+            NSLog(@"%@",[[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding]);
+            [self.bouncingBalls removeLoader];
+            if(responseArray.count == 0)
+            {
+                NSDictionary *options = @{
+                                          kCRToastTextKey : @"إسم المستخدم أو البريد الإلكتروني مستخدم من قبل",
+                                          kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                          kCRToastBackgroundColorKey : [UIColor redColor],
+                                          kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                          kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                          kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                          kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                          };
+                [CRToastManager showNotificationWithOptions:options
+                                            completionBlock:^{
+                                                NSLog(@"Completed");
+                                            }];
+            }else
+            {
+                [self.bouncingBalls removeLoader];
+                loggedUser = [responseArray objectAtIndex:0];
+                [self performSegueWithIdentifier:@"loginSeg2" sender:self];
+            }
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            [self.bouncingBalls removeLoader];
+            NSLog(@"Error: %@", error);
+        }];
+    }
 }
 @end
