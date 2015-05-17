@@ -212,23 +212,54 @@
         
         if([[((UIButton*)[cell viewWithTag:9]).titleLabel text]isEqualToString:@"توقع الأن و إربح !"])
         {
-            PollView* pollView = [[PollView alloc]init];
-            pollView = [pollView initWithNib];
-            [pollView setFrame:cell.contentView.frame];
+            self.bouncingBalls = [PQFBouncingBalls createModalLoader];
+            self.bouncingBalls.jumpAmount = 50;
+            self.bouncingBalls.zoomAmount = 20;
+            self.bouncingBalls.separation = 20;
+            [self.bouncingBalls showLoader];
             
-            [pollView initUI];
             
-            [cell.layer removeAllAnimations];
+            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+            manager.responseSerializer = [AFHTTPResponseSerializer serializer];
             
-            CATransition *transition = [CATransition animation];
-            transition.duration = 0.5;
-            transition.type = kCATransitionMoveIn;
-            transition.subtype = kCATransitionFromRight;
-            [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-            [cell.layer addAnimation:transition forKey:nil];
+            NSDictionary* params = @{@"gameID":[[[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row] objectForKey:@"id"],@"userID":[self.loggedUser objectForKey:@"id"]};
             
-            [cell addSubview:pollView];
+            [manager POST:@"http://moh2013.com/arabDevs/FootPoll/getMyVoteForGame.php" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                NSString* scoreEnetredBefore  = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+                [self.bouncingBalls removeLoader];
+                
+                PollView* pollView = [[PollView alloc]init];
+                pollView = [pollView initWithNib];
+                [pollView setFrame:cell.contentView.frame];
+                
+                [pollView initUI];
+                
+                if(scoreEnetredBefore.length == 0)
+                {
+                    pollView.clubOneScore.text = @"-";
+                    pollView.clubTwoScore.text = @"-";
+                }else
+                {
+                    NSArray* scores = [scoreEnetredBefore componentsSeparatedByString:@"-"];
+                    pollView.clubOneScore.text = [scores objectAtIndex:0];
+                    pollView.clubTwoScore.text = [scores objectAtIndex:1];
+                }
+                
+                [cell.layer removeAllAnimations];
+                
+                CATransition *transition = [CATransition animation];
+                transition.duration = 0.5;
+                transition.type = kCATransitionMoveIn;
+                transition.subtype = kCATransitionFromRight;
+                [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+                [cell.layer addAnimation:transition forKey:nil];
+                
+                [cell addSubview:pollView];
 
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [self.bouncingBalls removeLoader];
+                NSLog(@"Error: %@", error);
+            }];
         }else if([[((UIButton*)[cell viewWithTag:9]).titleLabel text]isEqualToString:@"شاهد التوقعات"])
         {
             PollResultView* pollView = [[PollResultView alloc]init];
