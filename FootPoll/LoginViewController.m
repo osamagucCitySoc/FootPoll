@@ -30,8 +30,11 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    AllMatchesViewController* dst = (AllMatchesViewController*)[segue destinationViewController];
-    [dst setLoggedUser:loggedUser];
+    if([[segue identifier]isEqualToString:@"loginSeg"])
+    {
+        AllMatchesViewController* dst = (AllMatchesViewController*)[segue destinationViewController];
+        [dst setLoggedUser:loggedUser];
+    }
 }
 
 - (void)viewDidLoad {

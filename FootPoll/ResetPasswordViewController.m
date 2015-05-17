@@ -7,12 +7,17 @@
 //
 
 #import "ResetPasswordViewController.h"
+#import "CRToastManager.h"
+#import "CRToast.h"
+#import "AFHTTPRequestOperationManager.h"
+#import <PQFCustomLoaders/PQFCustomLoaders.h>
 
 @interface ResetPasswordViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *hintLabel;
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (nonatomic, strong) PQFBouncingBalls *bouncingBalls;
 @end
 
 @implementation ResetPasswordViewController
@@ -51,6 +56,38 @@
     
     [[self navigationController].view.layer addAnimation:transition forKey:kCATransition];
     [[self navigationController] popViewControllerAnimated:YES];
+}
+- (IBAction)resetButtonClicked:(id)sender {
+    
+    self.bouncingBalls = [PQFBouncingBalls createModalLoader];
+    self.bouncingBalls.jumpAmount = 50;
+    self.bouncingBalls.zoomAmount = 20;
+    self.bouncingBalls.separation = 20;
+    [self.bouncingBalls showLoader];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    NSDictionary *parameters = @{@"userEmail": self.userNameTextField.text};
+    [manager POST:@"http://moh2013.com/arabDevs/FootPoll/resetPassword.php" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.bouncingBalls removeLoader];
+        NSString* message = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSDictionary *options = @{
+                                  kCRToastTextKey : message,
+                                  kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                  kCRToastBackgroundColorKey : [UIColor redColor],
+                                  kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                  kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                  kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                  kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                  };
+        [CRToastManager showNotificationWithOptions:options
+                                    completionBlock:^{
+                                        NSLog(@"Completed");
+                                    }];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.bouncingBalls removeLoader];
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 
