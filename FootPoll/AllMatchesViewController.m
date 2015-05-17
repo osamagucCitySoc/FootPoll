@@ -271,22 +271,65 @@
             }];
         }else if([[((UIButton*)[cell viewWithTag:9]).titleLabel text]isEqualToString:@"شاهد التوقعات"])
         {
-            PollResultView* pollView = [[PollResultView alloc]init];
-            pollView = [pollView initWithNib];
-            [pollView setFrame:cell.contentView.frame];
+            self.bouncingBalls = [PQFBouncingBalls createModalLoader];
+            self.bouncingBalls.jumpAmount = 50;
+            self.bouncingBalls.zoomAmount = 20;
+            self.bouncingBalls.separation = 20;
+            [self.bouncingBalls showLoader];
             
-            [pollView initUI];
             
-            [cell.layer removeAllAnimations];
+            AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+            manager.responseSerializer = [AFHTTPResponseSerializer serializer];
             
-            CATransition *transition = [CATransition animation];
-            transition.duration = 0.5;
-            transition.type = kCATransitionMoveIn;
-            transition.subtype = kCATransitionFromRight;
-            [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
-            [cell.layer addAnimation:transition forKey:nil];
+            NSDictionary* params = @{@"gameID":[[[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row] objectForKey:@"id"]};
             
-            [cell addSubview:pollView];
+            [manager POST:@"http://moh2013.com/arabDevs/FootPoll/getVotesForGame.php" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+
+                [self.bouncingBalls removeLoader];
+               
+                
+                NSArray* votes = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingAllowFragments error:nil];
+                
+                if(votes.count == 0)
+                {
+                    NSDictionary *options = @{
+                                              kCRToastTextKey : @"لا يوجد توقعات لهذه المباراة",
+                                              kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                              kCRToastBackgroundColorKey : [UIColor redColor],
+                                              kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                              kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                              kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                              kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                              };
+                    [CRToastManager showNotificationWithOptions:options
+                                                completionBlock:^{
+                                                    NSLog(@"Completed");
+                                                }];
+                }else
+                {
+                    PollResultView* pollView = [[PollResultView alloc]init];
+                    pollView = [pollView initWithNib];
+                    [pollView setFrame:cell.contentView.frame];
+                    [pollView setVotes:votes];
+                    
+                    [pollView initUI];
+                    
+                    [cell.layer removeAllAnimations];
+                
+                    CATransition *transition = [CATransition animation];
+                    transition.duration = 0.5;
+                    transition.type = kCATransitionMoveIn;
+                    transition.subtype = kCATransitionFromRight;
+                    [transition setTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut]];
+                    [cell.layer addAnimation:transition forKey:nil];
+                
+                    [cell addSubview:pollView];
+                }
+                
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                [self.bouncingBalls removeLoader];
+                NSLog(@"Error: %@", error);
+            }];
 
         }else if([[((UIButton*)[cell viewWithTag:9]).titleLabel text]isEqualToString:@"شاهد الرابح"])
         {}

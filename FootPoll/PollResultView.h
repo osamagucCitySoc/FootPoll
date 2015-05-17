@@ -11,6 +11,7 @@
 @interface PollResultView : UIView
 
 
+@property (nonatomic, strong) NSArray* votes;
 - (id)initWithNib;
 -(void)initUI;
 

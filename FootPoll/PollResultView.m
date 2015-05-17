@@ -47,24 +47,38 @@
 
     [self addSubview:pieChart];
     
+    int totalVotes = 0;
+    
+    for(NSDictionary* vote in self.votes)
+    {
+        totalVotes += [[vote objectForKey:@"totalScores"] intValue];
+    }
+    
+    
     NSMutableArray *components = [NSMutableArray array];
     
-    PCPieComponent *component1 = [PCPieComponent pieComponentWithTitle:@"2-0" value:33.0];
-    [component1 setColour:[UIColor colorWithRed:0.827 green:0.329 blue:0.0 alpha:1.0]];
-    
-    PCPieComponent *component2 = [PCPieComponent pieComponentWithTitle:@"1-0" value:28.0];
-    [component2 setColour:[UIColor colorWithRed:0.576 green:0.594 blue:0.0 alpha:1.0]];
-    
-    PCPieComponent *component3 = [PCPieComponent pieComponentWithTitle:@"0-0" value:22.0];
-    [component3 setColour:[UIColor colorWithRed:0.511 green:0.119 blue:0.16 alpha:1.0]];
-    
-    PCPieComponent *component4 = [PCPieComponent pieComponentWithTitle:@"0-1" value:17.0];
-    [component4 setColour:[UIColor colorWithRed:0.370 green:0.229 blue:0.081 alpha:1.0]];
-    
-    [components addObject:component1];
-    [components addObject:component2];
-    [components addObject:component3];
-    [components addObject:component4];
+    for(int i = 0 ; i < self.votes.count ; i++)
+    {
+        NSDictionary* vote = [self.votes objectAtIndex:i];
+        
+        PCPieComponent *component = [PCPieComponent pieComponentWithTitle:[vote objectForKey:@"score"] value:[[vote objectForKey:@"totalScores"] floatValue]];
+        if(i == 0)
+        {
+            [component setColour:[UIColor colorWithRed:0.827 green:0.329 blue:0.0 alpha:1.0]];
+        }else if(i == 1)
+        {
+            [component setColour:[UIColor colorWithRed:0.576 green:0.594 blue:0.0 alpha:1.0]];
+        }else if(i == 2)
+        {
+            [component setColour:[UIColor colorWithRed:0.511 green:0.119 blue:0.16 alpha:1.0]];
+        }else if(i == 3)
+        {
+            [component setColour:[UIColor colorWithRed:0.370 green:0.229 blue:0.081 alpha:1.0]];
+        }
+        
+        [components addObject:component];
+    }
+
     
     [pieChart setComponents:components];
 }
