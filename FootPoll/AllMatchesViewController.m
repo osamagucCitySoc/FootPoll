@@ -18,7 +18,7 @@
 #import <PQFCustomLoaders/PQFCustomLoaders.h>
 #import <Haneke/Haneke.h>
 #import "MyStatsViewController.h"
-
+#import <Parse/Parse.h>
 @interface AllMatchesViewController ()<UITableViewDataSource,UITableViewDelegate,floatMenuDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -155,6 +155,7 @@
     
     
     [((UISwitch*)[cell viewWithTag:10]) setOn:NO animated:YES];
+    [((UISwitch*)[cell viewWithTag:10])  addTarget:self action:@selector(valueTapped:) forControlEvents:UIControlEventValueChanged];
     
     NSDictionary* currentGame = [[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row];
     
@@ -182,6 +183,17 @@
     [((UILabel*)[cell viewWithTag:6]) setText:[currentGame objectForKey:@"status"]];
     [((UILabel*)[cell viewWithTag:3]) setText:[currentGame objectForKey:@"score"]];
     
+    
+    NSArray *subscribedChannels = [PFInstallation currentInstallation].channels;
+    
+    for(NSString* channel in subscribedChannels)
+    {
+        if([channel isEqualToString:[NSString stringWithFormat:@"%@%@",@"M",[currentGame objectForKey:@"id"]]])
+        {
+            [((UISwitch*)[cell viewWithTag:10]) setOn:YES animated:YES];
+            break;
+        }
+    }
     
     
 }
@@ -211,7 +223,27 @@
 }
 
 
-
+- (void)valueTapped:(UISwitch*)sender
+{
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    if (indexPath != nil)
+    {
+        NSLog(@"%i - %@",sender.isOn,[[[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row] objectForKey:@"id"]);
+        if(sender.isOn)
+        {
+            
+            PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+            [currentInstallation addUniqueObject:[NSString stringWithFormat:@"%@%@",@"M",[[[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row] objectForKey:@"id"]] forKey:@"channels"];
+            [currentInstallation saveInBackground];
+        }else
+        {
+            PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+            [currentInstallation removeObject:[NSString stringWithFormat:@"%@%@",@"M",[[[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row] objectForKey:@"id"]] forKey:@"channels"];
+            [currentInstallation saveInBackground];
+        }
+    }
+}
 
 - (void)checkButtonTapped:(UIButton*)sender
 {
