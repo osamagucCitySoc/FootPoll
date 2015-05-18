@@ -84,6 +84,10 @@
 		E8D3BE281B098E0E0048305B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE261B098E0E0048305B /* CoreGraphics.framework */; };
 		E8D3BE291B098E0E0048305B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE271B098E0E0048305B /* CoreLocation.framework */; };
 		E8D3BE2B1B098E170048305B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE2A1B098E170048305B /* libsqlite3.dylib */; };
+		E8D3BE2D1B098E6B0048305B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE2C1B098E6B0048305B /* MobileCoreServices.framework */; };
+		E8D3BE2F1B098E740048305B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE2E1B098E740048305B /* Security.framework */; };
+		E8D3BE311B098E850048305B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE301B098E850048305B /* libz.dylib */; };
+		E8D3BE331B098E9E0048305B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE321B098E9E0048305B /* StoreKit.framework */; };
 		E8F2A67E1AFF4BDA00BBF3B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A67D1AFF4BDA00BBF3B6 /* main.m */; };
 		E8F2A6811AFF4BDA00BBF3B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A6801AFF4BDA00BBF3B6 /* AppDelegate.m */; };
 		E8F2A6841AFF4BDA00BBF3B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A6831AFF4BDA00BBF3B6 /* ViewController.m */; };
@@ -217,6 +221,10 @@
 		E8D3BE261B098E0E0048305B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		E8D3BE271B098E0E0048305B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E8D3BE2A1B098E170048305B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E8D3BE2C1B098E6B0048305B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E8D3BE2E1B098E740048305B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E8D3BE301B098E850048305B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E8D3BE321B098E9E0048305B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		E8F2A6781AFF4BDA00BBF3B6 /* FootPoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootPoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F2A67C1AFF4BDA00BBF3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F2A67D1AFF4BDA00BBF3B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -268,6 +276,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D3BE331B098E9E0048305B /* StoreKit.framework in Frameworks */,
+				E8D3BE311B098E850048305B /* libz.dylib in Frameworks */,
+				E8D3BE2D1B098E6B0048305B /* MobileCoreServices.framework in Frameworks */,
+				E8D3BE2F1B098E740048305B /* Security.framework in Frameworks */,
 				E8D3BE2B1B098E170048305B /* libsqlite3.dylib in Frameworks */,
 				E8D3BE281B098E0E0048305B /* CoreGraphics.framework in Frameworks */,
 				E8D3BE291B098E0E0048305B /* CoreLocation.framework in Frameworks */,
@@ -299,6 +311,10 @@
 		8F709A1C0B03A940616CFB3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8D3BE321B098E9E0048305B /* StoreKit.framework */,
+				E8D3BE301B098E850048305B /* libz.dylib */,
+				E8D3BE2E1B098E740048305B /* Security.framework */,
+				E8D3BE2C1B098E6B0048305B /* MobileCoreServices.framework */,
 				E8A20EE91B00E25500EFB8E6 /* Accelerate.framework */,
 				E8A20EE71B00CEBC00EFB8E6 /* QuartzCore.framework */,
 				E8F2A6F51AFFB33900BBF3B6 /* AVFoundation.framework */,
