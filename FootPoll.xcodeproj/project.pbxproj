@@ -74,6 +74,16 @@
 		E8D2340A1B0256FF00244D6D /* User-100@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234071B0256FF00244D6D /* User-100@2x.png */; };
 		E8D2340B1B0256FF00244D6D /* User-100@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8D234081B0256FF00244D6D /* User-100@3x.png */; };
 		E8D2340E1B02588900244D6D /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D2340D1B02588900244D6D /* LeaderBoardViewController.m */; };
+		E8D3BE1B1B098DCC0048305B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE181B098DCC0048305B /* Bolts.framework */; };
+		E8D3BE1C1B098DCC0048305B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE191B098DCC0048305B /* Parse.framework */; };
+		E8D3BE1D1B098DCC0048305B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE1A1B098DCC0048305B /* ParseUI.framework */; };
+		E8D3BE1F1B098DEC0048305B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE1E1B098DEC0048305B /* AdSupport.framework */; };
+		E8D3BE211B098DF30048305B /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE201B098DF30048305B /* Social.framework */; };
+		E8D3BE231B098DF90048305B /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE221B098DF90048305B /* Accounts.framework */; };
+		E8D3BE251B098E010048305B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE241B098E010048305B /* CFNetwork.framework */; };
+		E8D3BE281B098E0E0048305B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE261B098E0E0048305B /* CoreGraphics.framework */; };
+		E8D3BE291B098E0E0048305B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE271B098E0E0048305B /* CoreLocation.framework */; };
+		E8D3BE2B1B098E170048305B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D3BE2A1B098E170048305B /* libsqlite3.dylib */; };
 		E8F2A67E1AFF4BDA00BBF3B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A67D1AFF4BDA00BBF3B6 /* main.m */; };
 		E8F2A6811AFF4BDA00BBF3B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A6801AFF4BDA00BBF3B6 /* AppDelegate.m */; };
 		E8F2A6841AFF4BDA00BBF3B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8F2A6831AFF4BDA00BBF3B6 /* ViewController.m */; };
@@ -197,6 +207,16 @@
 		E8D234081B0256FF00244D6D /* User-100@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User-100@3x.png"; sourceTree = "<group>"; };
 		E8D2340C1B02588900244D6D /* LeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewController.h; sourceTree = "<group>"; };
 		E8D2340D1B02588900244D6D /* LeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
+		E8D3BE181B098DCC0048305B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E8D3BE191B098DCC0048305B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E8D3BE1A1B098DCC0048305B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		E8D3BE1E1B098DEC0048305B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		E8D3BE201B098DF30048305B /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E8D3BE221B098DF90048305B /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E8D3BE241B098E010048305B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E8D3BE261B098E0E0048305B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E8D3BE271B098E0E0048305B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E8D3BE2A1B098E170048305B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E8F2A6781AFF4BDA00BBF3B6 /* FootPoll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootPoll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8F2A67C1AFF4BDA00BBF3B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8F2A67D1AFF4BDA00BBF3B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -248,10 +268,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D3BE2B1B098E170048305B /* libsqlite3.dylib in Frameworks */,
+				E8D3BE281B098E0E0048305B /* CoreGraphics.framework in Frameworks */,
+				E8D3BE291B098E0E0048305B /* CoreLocation.framework in Frameworks */,
+				E8D3BE251B098E010048305B /* CFNetwork.framework in Frameworks */,
+				E8D3BE231B098DF90048305B /* Accounts.framework in Frameworks */,
+				E8D3BE211B098DF30048305B /* Social.framework in Frameworks */,
+				E8D3BE1F1B098DEC0048305B /* AdSupport.framework in Frameworks */,
 				E8A20EEA1B00E25500EFB8E6 /* Accelerate.framework in Frameworks */,
 				E8A20EE81B00CEBC00EFB8E6 /* QuartzCore.framework in Frameworks */,
 				E8F2A6F61AFFB33900BBF3B6 /* AVFoundation.framework in Frameworks */,
+				E8D3BE1C1B098DCC0048305B /* Parse.framework in Frameworks */,
+				E8D3BE1B1B098DCC0048305B /* Bolts.framework in Frameworks */,
 				E8F2A6CE1AFF8D5300BBF3B6 /* AudioToolbox.framework in Frameworks */,
+				E8D3BE1D1B098DCC0048305B /* ParseUI.framework in Frameworks */,
 				C7596108A453CF74CDB3234C /* libPods-FootPoll.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +299,20 @@
 		8F709A1C0B03A940616CFB3F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E8A20EE91B00E25500EFB8E6 /* Accelerate.framework */,
+				E8A20EE71B00CEBC00EFB8E6 /* QuartzCore.framework */,
+				E8F2A6F51AFFB33900BBF3B6 /* AVFoundation.framework */,
+				E8F2A6CD1AFF8D5300BBF3B6 /* AudioToolbox.framework */,
+				E8D3BE181B098DCC0048305B /* Bolts.framework */,
+				E8D3BE191B098DCC0048305B /* Parse.framework */,
+				E8D3BE1A1B098DCC0048305B /* ParseUI.framework */,
+				E8D3BE2A1B098E170048305B /* libsqlite3.dylib */,
+				E8D3BE261B098E0E0048305B /* CoreGraphics.framework */,
+				E8D3BE271B098E0E0048305B /* CoreLocation.framework */,
+				E8D3BE241B098E010048305B /* CFNetwork.framework */,
+				E8D3BE221B098DF90048305B /* Accounts.framework */,
+				E8D3BE201B098DF30048305B /* Social.framework */,
+				E8D3BE1E1B098DEC0048305B /* AdSupport.framework */,
 				2AA526695C4CFEA0588276DF /* libPods-FootPoll.a */,
 			);
 			name = Frameworks;
@@ -307,10 +351,6 @@
 		E8F2A66F1AFF4BDA00BBF3B6 = {
 			isa = PBXGroup;
 			children = (
-				E8A20EE91B00E25500EFB8E6 /* Accelerate.framework */,
-				E8A20EE71B00CEBC00EFB8E6 /* QuartzCore.framework */,
-				E8F2A6F51AFFB33900BBF3B6 /* AVFoundation.framework */,
-				E8F2A6CD1AFF8D5300BBF3B6 /* AudioToolbox.framework */,
 				E8F2A67A1AFF4BDA00BBF3B6 /* FootPoll */,
 				E8F2A6941AFF4BDA00BBF3B6 /* FootPollTests */,
 				E8F2A6791AFF4BDA00BBF3B6 /* Products */,
@@ -833,6 +873,10 @@
 			baseConfigurationReference = E0AB4857BF2BACBB586A84F2 /* Pods-FootPoll.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FootPoll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -845,6 +889,10 @@
 			baseConfigurationReference = 20C8B45E67D5B2E998F1B2EB /* Pods-FootPoll.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = FootPoll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

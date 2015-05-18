@@ -105,7 +105,6 @@
     NSDictionary* currentDict = [dataSource objectAtIndex:indexPath.row];
     ((UILabel*)[cell viewWithTag:2]).text = [currentDict objectForKey:@"username"];
     ((UILabel*)[cell viewWithTag:3]).text = [NSString stringWithFormat:@"%@ : %@",@"عدد التوقعات الرابحة",[currentDict objectForKey:@"winningCount"]];
-    
 }
 
 
