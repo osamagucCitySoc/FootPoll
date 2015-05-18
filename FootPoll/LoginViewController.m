@@ -123,6 +123,10 @@
         {
             [self.bouncingBalls removeLoader];
             loggedUser = [responseArray objectAtIndex:0];
+            
+            [[NSUserDefaults standardUserDefaults]setObject:loggedUser forKey:@"loggedInUser"];
+            [[NSUserDefaults standardUserDefaults]synchronize];
+            
             [self performSegueWithIdentifier:@"loginSeg" sender:self];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

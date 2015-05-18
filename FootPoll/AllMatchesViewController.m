@@ -55,7 +55,6 @@
     [self.tableView reloadData];
     [self.tableView setNeedsDisplay];
     
-    [self loadData];
 
 }
 
@@ -87,6 +86,8 @@
     [self.tableView addSubview:self.refreshControl];
     
     [self.view addSubview:addButton];
+    
+    [self loadData];
 
 }
 

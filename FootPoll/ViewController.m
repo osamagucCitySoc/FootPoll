@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <AudioToolbox/AudioServices.h>
 #import "LoginViewController.h"
+#import "AllMatchesViewController.h"
 
 
 @interface ViewController ()
@@ -21,6 +22,16 @@
 @end
 
 @implementation ViewController
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([[segue identifier]isEqualToString:@"loginSeg2"])
+    {
+        AllMatchesViewController* dst = (AllMatchesViewController*)[segue destinationViewController];
+        [dst setLoggedUser:[[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInUser"]];
+    }
+}
 
 
 
@@ -77,6 +88,11 @@
     pulseAnimation.repeatCount = FLT_MAX;
     [self.logoButton.layer addAnimation:pulseAnimation forKey:nil];
     
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"loggedInUser"])
+    {
+        [self performSegueWithIdentifier:@"loginSeg2" sender:self];
+    }
     
 }
 
