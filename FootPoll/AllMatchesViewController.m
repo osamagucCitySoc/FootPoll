@@ -124,12 +124,12 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 160;
+    return 190;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 160;
+    return 190;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -147,12 +147,14 @@
     [((UIButton*)[cell viewWithTag:9]) addTarget:self action:@selector(checkButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
 
     ((UILabel*)[cell viewWithTag:1]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
-   // ((UILabel*)[cell viewWithTag:3]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     ((UILabel*)[cell viewWithTag:5]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     ((UILabel*)[cell viewWithTag:6]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     ((UILabel*)[cell viewWithTag:7]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     ((UILabel*)[cell viewWithTag:8]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
+    ((UILabel*)[cell viewWithTag:11]).font = [UIFont fontWithName:@"DroidArabicKufi-bold" size:12];
     
+    
+    [((UISwitch*)[cell viewWithTag:10]) setOn:NO animated:YES];
     
     NSDictionary* currentGame = [[[dataSource objectAtIndex:indexPath.section] objectForKey:@"games"] objectAtIndex:indexPath.row];
     

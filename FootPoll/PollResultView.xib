@@ -22,14 +22,14 @@
                     </state>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="Qe5-j9-v2Z"/>
                             <exclude reference="1Dw-iS-cYv"/>
+                            <exclude reference="Qe5-j9-v2Z"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="constraints">
-                            <include reference="Qe5-j9-v2Z"/>
                             <include reference="1Dw-iS-cYv"/>
+                            <include reference="Qe5-j9-v2Z"/>
                         </mask>
                     </variation>
                     <connections>
